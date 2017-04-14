@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin - Mis revistas</title>
+    <!-- Bootstrap -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,700i" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-multiselect.css">
+    <link rel="stylesheet" href="../css/magnific-popup.css?v1">
+    <link rel="stylesheet" href="../css/style.css?v1">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div id="main">
+        <div class="container">
+            <header class="header fluid-list">
+                <div class="fluid-list top-header">
+                    <div class="left logo-header">
+                        <a href="#"><img src="../img/logo-natura.png"></a>
+                    </div>
+                    <div class="right user-nav">
+                        <span class="center"><i class="fa fa-user" aria-hidden="true"></i></span>
+                        <div class="user-list navbar-right">
+                            <span>Bienvenid@</span>
+                            <div class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Guiliana Burga<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Mi perfil</a></li>
+                                    <li><a href="#">Cambiar contraseña</a></li>
+                                    <li><a href="#">Cerrar Sesión</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fluid-list nav-header">
+                    <ul class="reset-ul">
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#" class="active">Mis revistas</a></li>
+                        <li><a href="#">Auditoría</a></li>
+                        <li><a href="#">Reclamos</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mis indicadores</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Efectividad de entrega</a></li>
+                                <li><a href="#">Gestión de reclamos</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Administración de Usuarios</a></li>
+                    </ul>
+                </div>
+            </header>
+            <div class="fluid-list cnt-container">
+                <div class="fluid-list bread-n">
+                    <ul class="reset-ul">
+                        <li>
+                            <a href="#">
+                                < Volver</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="fluid-list cnt-table-filter">
+                    <h2>Listado de Reparto <span class="right">15 de febrero del 2017</span></h2>
+                    <div class="fluid-list filter-b" id="filterS">
+                        <ul class="reset-ul">
+                            <li>Filtrar por:</li>
+                            <li>
+                                <select id="adCodigo" class="form-control" multiple="multiple">
+                                    <option value="1">345678</option>
+                                    <option value="2">456783</option>
+                                    <option value="3">564321</option>
+                                    <option value="4">676543</option>
+                                    <option value="5">789877</option>
+                                </select>
+                            </li>
+                            <li>
+                                <select id="adCNO" class="form-control" multiple="multiple">
+                                    <option value="1">cno 1</option>
+                                    <option value="2">cno 1</option>
+                                    <option value="3">cno 1</option>
+                                    <option value="4">cno 1</option>
+                                    <option value="5">cno 1</option>
+                                </select>
+                            </li>
+                            <li>
+                                <select id="adGerencia" class="form-control" multiple="multiple">
+                                    <option value="1">Gerencia 1</option>
+                                    <option value="2">Gerencia 1</option>
+                                    <option value="3">Gerencia 1</option>
+                                    <option value="4">Gerencia 1</option>
+                                    <option value="5">Gerencia 1</option>
+                                </select>
+                            </li>
+                            <li>
+                                <select id="adSector" class="form-control" multiple="multiple">
+                                    <option value="1">Sector 1</option>
+                                    <option value="2">Sector 1</option>
+                                    <option value="3">Sector 1</option>
+                                    <option value="4">Sector 1</option>
+                                    <option value="5">Sector 1</option>
+                                </select>
+                            </li>
+                            <li>
+                                <input type="text" name="gvCodCons" class="form-control gvCod" placeholder="Ingresa código.">
+                            </li>
+                            <li>
+                                <button class="btn btn-search">Buscar</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="fluid-list cnt-table-n">
+                        <table id="tableCN" class="table table-condensed table-custom-n" style="border-collapse:collapse;">
+                            <thead>
+                                <tr>
+                                    <th>Consultora</th>
+                                    <th>Ciclo</th>
+                                    <th>Situación</th>
+                                    <th class="center">Reclamo</th>
+                                    <th class="center">Auditoría</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-toggle="collapse" data-target="#n1">23456789</td>
+                                    <td data-toggle="collapse" data-target="#n1">19/2/2017</td>
+                                    <td data-toggle="collapse" data-target="#n1">Entregado</td>
+                                    <td class="center"><a href="#" data-toggle="modal" data-target="#tModalR"><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></td>
+                                    <td class="center">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" checked>
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="tableHidden">
+                                    <td colspan="5" class="hiddenRow">
+                                        <div id="n1" class="collapse cnt-int-c">
+                                            <ul class="nav nav-tabs" role="tablist">
+                                                <li role="presentation" class="active"><a href="#datoB1" aria-controls="home" role="tab" data-toggle="tab">Datos básicos</a></li>
+                                                <li role="presentation"><a href="#traking1" aria-controls="profile" role="tab" data-toggle="tab">Tracking del envío</a></li>
+                                            </ul>
+                                            <div class="tab-content">
+                                                <div role="tabpanel" class="tab-pane active" id="datoB1">
+                                                    <table class="table table-tab-b">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Nombre:</td>
+                                                                <td>Lorem ipsum dolor sit amet</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Inactividad:</td>
+                                                                <td>Lorem ipsum dolor sit amet</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Dirección:</td>
+                                                                <td>Lorem ipsum dolor sit amet</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Distrito:</td>
+                                                                <td>San Miguel</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Teléfono:</td>
+                                                                <td>675-7857</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div role="tabpanel" class="tab-pane" id="traking1">
+                                                    <table class="table table-tab-f">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Fecha</th>
+                                                                <th>Estado</th>
+                                                                <th>Observación</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>19/2/2017 - 09:34</td>
+                                                                <td>Captación</td>
+                                                                <td>Lorem ipsum dolor sit amet, consectetur</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>19/2/2017 - 09:34</td>
+                                                                <td>Aprobado</td>
+                                                                <td>Lorem ipsum dolor sit amet, consectetur</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>19/2/2017 - 09:34</td>
+                                                                <td>Separación</td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>19/2/2017 - 09:34</td>
+                                                                <td>Transporte</td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>19/2/2017 - 09:34</td>
+                                                                <td>Entregado <i class="fa fa-motorcycle" aria-hidden="true" style="color: #000;font-size: 25px;"></i></td>
+                                                                <td>
+                                                                    <div class="popup-gallery list-img-v">
+                                                                        <a href="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_b.jpg" title="The Cleaner">Ver Fotos</a>
+                                                                        <a href="http://farm9.staticflickr.com/8382/8558295631_0f56c1284f_b.jpg" title="Winter Dance">Ver Fotos</a>
+                                                                        <a href="http://farm9.staticflickr.com/8382/8558295631_0f56c1284f_b.jpg" title="Winter Dance">Ver Fotos</a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-toggle="collapse" data-target="#n2">23456789</td>
+                                    <td data-toggle="collapse" data-target="#n2">19/2/2017</td>
+                                    <td data-toggle="collapse" data-target="#n2">Motivado</td>
+                                    <td class="center"><a href="#" data-toggle="modal" data-target="#tModalR"><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></td>
+                                    <td class="center">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox">
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="tableHidden">
+                                    <td colspan="5" class="hiddenRow">
+                                        <div id="n2" class="collapse cnt-int-c">
+                                            <ul class="nav nav-tabs" role="tablist">
+                                                <li role="presentation" class="active"><a href="#datoB2" aria-controls="home" role="tab" data-toggle="tab">Datos básicos</a></li>
+                                                <li role="presentation"><a href="#traking2" aria-controls="profile" role="tab" data-toggle="tab">Tracking del envío</a></li>
+                                            </ul>
+                                            <div class="tab-content">
+                                                <div role="tabpanel" class="tab-pane active" id="datoB2">
+                                                    <table class="table table-tab-b">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Nombre:</td>
+                                                                <td>Lorem ipsum dolor sit amet</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Inactividad:</td>
+                                                                <td>Lorem ipsum dolor sit amet</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Dirección:</td>
+                                                                <td>Lorem ipsum dolor sit amet</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Distrito:</td>
+                                                                <td>San Miguel</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Teléfono:</td>
+                                                                <td>675-7857</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div role="tabpanel" class="tab-pane" id="traking2">
+                                                    <table class="table table-tab-f">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Fecha</th>
+                                                                <th>Estado</th>
+                                                                <th>Observación</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>19/2/2017 - 09:34</td>
+                                                                <td>Captación</td>
+                                                                <td>Lorem ipsum dolor sit amet, consectetur</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>19/2/2017 - 09:34</td>
+                                                                <td>Aprobado</td>
+                                                                <td>Lorem ipsum dolor sit amet, consectetur</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>19/2/2017 - 09:34</td>
+                                                                <td>Separación</td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>19/2/2017 - 09:34</td>
+                                                                <td>Transporte</td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>19/2/2017 - 09:34</td>
+                                                                <td>Entregado <i class="fa fa-motorcycle" aria-hidden="true" style="color: #000;font-size: 25px;"></i></td>
+                                                                <td></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-toggle="collapse" data-target="#n3">23456789</td>
+                                    <td data-toggle="collapse" data-target="#n3">19/2/2017</td>
+                                    <td data-toggle="collapse" data-target="#n3">Anulado</td>
+                                    <td class="center"><a href="#" data-toggle="modal" data-target="#tModalR"><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></td>
+                                    <td class="center">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" checked>
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="tableHidden">
+                                    <td colspan="5" class="hiddenRow">
+                                        <div id="n3" class="collapse cnt-int-c">
+                                            <ul class="nav nav-tabs" role="tablist">
+                                                <li role="presentation" class="active"><a href="#datoB3" aria-controls="home" role="tab" data-toggle="tab">Datos básicos</a></li>
+                                                <li role="presentation"><a href="#traking3" aria-controls="profile" role="tab" data-toggle="tab">Tracking del envío</a></li>
+                                            </ul>
+                                            <div class="tab-content">
+                                                <div role="tabpanel" class="tab-pane active" id="datoB3">
+                                                    <table class="table table-tab-b">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Nombre:</td>
+                                                                <td>Lorem ipsum dolor sit amet</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Inactividad:</td>
+                                                                <td>Lorem ipsum dolor sit amet</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Dirección:</td>
+                                                                <td>Lorem ipsum dolor sit amet</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Distrito:</td>
+                                                                <td>San Miguel</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Teléfono:</td>
+                                                                <td>675-7857</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div role="tabpanel" class="tab-pane" id="traking3">
+                                                    <table class="table table-tab-f">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Fecha</th>
+                                                                <th>Estado</th>
+                                                                <th>Observación</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>19/2/2017 - 09:34</td>
+                                                                <td>Captación</td>
+                                                                <td>Lorem ipsum dolor sit amet, consectetur</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>19/2/2017 - 09:34</td>
+                                                                <td>Aprobado</td>
+                                                                <td>Lorem ipsum dolor sit amet, consectetur</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>19/2/2017 - 09:34</td>
+                                                                <td>Separación</td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>19/2/2017 - 09:34</td>
+                                                                <td>Transporte</td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>19/2/2017 - 09:34</td>
+                                                                <td>Entregado <i class="fa fa-motorcycle" aria-hidden="true" style="color: #000;font-size: 25px;"></i></td>
+                                                                <td></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-toggle="collapse" data-target="#n3">23456789</td>
+                                    <td data-toggle="collapse" data-target="#n3">19/2/2017</td>
+                                    <td data-toggle="collapse" data-target="#n3">Anulado</td>
+                                    <td class="center"><a href="#" data-toggle="modal" data-target="#tModalR"><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></td>
+                                    <td class="center">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox">
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="tableHidden">
+                                    <td colspan="5" class="hiddenRow">
+                                        <div id="n4" class="collapse cnt-int-c">
+                                            <ul class="nav nav-tabs" role="tablist">
+                                                <li role="presentation" class="active"><a href="#datoB4" aria-controls="home" role="tab" data-toggle="tab">Datos básicos</a></li>
+                                                <li role="presentation"><a href="#traking4" aria-controls="profile" role="tab" data-toggle="tab">Tracking del envío</a></li>
+                                            </ul>
+                                            <div class="tab-content">
+                                                <div role="tabpanel" class="tab-pane active" id="datoB4">
+                                                    <table class="table table-tab-b">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Nombre:</td>
+                                                                <td>Lorem ipsum dolor sit amet</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Inactividad:</td>
+                                                                <td>Lorem ipsum dolor sit amet</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Dirección:</td>
+                                                                <td>Lorem ipsum dolor sit amet</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Distrito:</td>
+                                                                <td>San Miguel</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Teléfono:</td>
+                                                                <td>675-7857</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div role="tabpanel" class="tab-pane" id="traking4">
+                                                    <table class="table table-tab-f">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Fecha</th>
+                                                                <th>Estado</th>
+                                                                <th>Observación</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>19/2/2017 - 09:34</td>
+                                                                <td>Captación</td>
+                                                                <td>Lorem ipsum dolor sit amet, consectetur</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>19/2/2017 - 09:34</td>
+                                                                <td>Aprobado</td>
+                                                                <td>Lorem ipsum dolor sit amet, consectetur</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>19/2/2017 - 09:34</td>
+                                                                <td>Separación</td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>19/2/2017 - 09:34</td>
+                                                                <td>Transporte</td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>19/2/2017 - 09:34</td>
+                                                                <td>Entregado <i class="fa fa-motorcycle" aria-hidden="true" style="color: #000;font-size: 25px;"></i></td>
+                                                                <td></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-toggle="collapse" data-target="#n5">23456789</td>
+                                    <td data-toggle="collapse" data-target="#n5">19/2/2017</td>
+                                    <td data-toggle="collapse" data-target="#n5">Anulado</td>
+                                    <td class="center"><a href="#" data-toggle="modal" data-target="#tModalR"><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></td>
+                                    <td class="center">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox">
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="tableHidden">
+                                    <td colspan="5" class="hiddenRow">
+                                        <div id="n5" class="collapse cnt-int-c">
+                                            <ul class="nav nav-tabs" role="tablist">
+                                                <li role="presentation" class="active"><a href="#datoB5" aria-controls="home" role="tab" data-toggle="tab">Datos básicos</a></li>
+                                                <li role="presentation"><a href="#traking5" aria-controls="profile" role="tab" data-toggle="tab">Tracking del envío</a></li>
+                                            </ul>
+                                            <div class="tab-content">
+                                                <div role="tabpanel" class="tab-pane active" id="datoB5">
+                                                    <table class="table table-tab-b">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Nombre:</td>
+                                                                <td>Lorem ipsum dolor sit amet</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Inactividad:</td>
+                                                                <td>Lorem ipsum dolor sit amet</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Dirección:</td>
+                                                                <td>Lorem ipsum dolor sit amet</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Distrito:</td>
+                                                                <td>San Miguel</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Teléfono:</td>
+                                                                <td>675-7857</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div role="tabpanel" class="tab-pane" id="traking5">
+                                                    <table class="table table-tab-f">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Fecha</th>
+                                                                <th>Estado</th>
+                                                                <th>Observación</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>19/2/2017 - 09:34</td>
+                                                                <td>Captación</td>
+                                                                <td>Lorem ipsum dolor sit amet, consectetur</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>19/2/2017 - 09:34</td>
+                                                                <td>Aprobado</td>
+                                                                <td>Lorem ipsum dolor sit amet, consectetur</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>19/2/2017 - 09:34</td>
+                                                                <td>Separación</td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>19/2/2017 - 09:34</td>
+                                                                <td>Transporte</td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>19/2/2017 - 09:34</td>
+                                                                <td>Entregado <i class="fa fa-motorcycle" aria-hidden="true" style="color: #000;font-size: 25px;"></i></td>
+                                                                <td></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!--Modal de Reclamo-->
+                        <div class="modal fade modal-custom-n" id="tModalR" tabindex="-1" role="dialog" aria-labelledby="tModalLabel">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        <form class="form-horizontal m-form-n" action="">
+                                            <h2>Escribir un reclamo</h2>
+                                            <div class="form-group">
+                                                <label for="tRecla" class="col-sm-2 control-label">Tipo de reclamo:</label>
+                                                <div class="col-sm-7">
+                                                    <select class="form-control" name="tRecla">
+                                                        <option>Dirección de Email</option>
+                                                        <option>Dirección de Email 1</option>
+                                                        <option>Dirección de Email 2</option>
+                                                        <option>Dirección de Email 3</option>
+                                                        <option>Dirección de Email 4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="titulo" class="col-sm-2 control-label">Título:</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" name="titulo" class="form-control" id="titulo">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="msn" class="col-sm-2 control-label">Mensaje:</label>
+                                                <div class="col-sm-10">
+                                                    <textarea name="msn" class="form-control" rows="5"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-sm-offset-2 col-sm-10">
+                                                    <button type="submit" class="btn btn-mC btn-grabar">GRABAR</button>
+                                                    <button type="button" class="btn btn-mC btn-cancelar" data-dismiss="modal">CANCELAR</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End-->
+                        <!--Modal de email-->
+                        <div class="modal fade modal-custom-n" id="tModalE" tabindex="-1" role="dialog" aria-labelledby="tModalLabel">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        <form class="form-horizontal m-form-n" action="">
+                                            <h2>Enviar listado por mail</h2>
+                                            <p>Si deseas enviar a varios destinatarios, separe las direcciones de emailutilizando punto y coma (;).</p>
+                                            <div class="form-group">
+                                                <label for="email" class="col-sm-2 control-label">Enviar a :</label>
+                                                <div class="col-sm-10">
+                                                    <input type="email" name="email" class="form-control" id="titulo" placeholder="dirección de email">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="msn" class="col-sm-2 control-label">Mensaje:</label>
+                                                <div class="col-sm-10">
+                                                    <textarea name="msn" class="form-control" rows="5"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-sm-offset-2 col-sm-10">
+                                                    <button type="submit" class="btn btn-mC btn-grabar">ENVIAR</button>
+                                                    <button type="button" class="btn btn-mC btn-cancelar" data-dismiss="modal">CANCELAR</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End-->
+                    </div>
+                    <div class="fluid-list cnt-table-f">
+                        <div class="fluid-list b-list-pag">
+                            <div class="left">
+                                <ul class="reset-ul">
+                                    <li><a href="#" class="e-excel"><span></span> Exportar a Excel</a></li>
+                                    <li><a href="#" class="e-mail" data-toggle="modal" data-target="#tModalE"><span></span> Enviar a mail</a></li>
+                                </ul>
+                            </div>
+                            <div class="right">
+                                <ul class="pagination">
+                                    <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">< Anterior</span></a></li>
+                                    <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#" aria-label="Next"><span aria-hidden="true">Siguiente ></span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--Modal de email-->
+                        <div class="modal fade modal-custom-n" id="tModalE" tabindex="-1" role="dialog" aria-labelledby="tModalLabel">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        <form class="form-horizontal m-form-n" action="">
+                                            <h2>Enviar listado por mail</h2>
+                                            <p>Si deseas enviar a varios destinatarios, separe las direcciones de emailutilizando punto y coma (;).</p>
+                                            <div class="form-group">
+                                                <label for="email" class="col-sm-2 control-label">Enviar a :</label>
+                                                <div class="col-sm-10">
+                                                    <input type="email" name="email" class="form-control" id="titulo" placeholder="dirección de email">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="msn" class="col-sm-2 control-label">Mensaje:</label>
+                                                <div class="col-sm-10">
+                                                    <textarea name="msn" class="form-control" rows="5"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-sm-offset-2 col-sm-10">
+                                                    <button type="submit" class="btn btn-mC btn-grabar">ENVIAR</button>
+                                                    <button type="button" class="btn btn-mC btn-cancelar" data-dismiss="modal">CANCELAR</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap-multiselect.js"></script>
+    <script src="../js/jquery.magnific-popup.min.js"></script>
+    <script src="../js/main.js?v1"></script>
+</body>
+</html>

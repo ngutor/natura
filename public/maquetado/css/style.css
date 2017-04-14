@@ -50,7 +50,7 @@ body{font-family: 'Open Sans', sans-serif;font-size: 14px;background: #ebebeb;}
 #main>.container{width: 980px;padding-left: 20px;padding-right: 20px;background: #fff;}
 .nav-header{background: #f2a900;border-radius: 10px;-webkit-box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.3);-moz-box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.3);box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.3);}
 .nav-header>ul>li{float: left;}
-.nav-header>ul>li>a{height: 40px;line-height: 40px;padding: 0 35px;font-size: 14px;font-weight: 700;color: #fff;display: block;}
+.nav-header>ul>li>a{height: 40px;line-height: 40px;padding: 0 20px;font-size: 14px;font-weight: 700;color: #fff;display: block;}
 .nav-header>ul>li>a:hover,.nav-header>ul>li>a:focus, .nav-header>ul>li>a:active, .nav-header>ul>li>a.active{background: #f2821b;text-decoration: none;}
 .nav-header>ul>li:first-child>a{border-radius: 10px 0 0 10px;}
 .user-nav>span{display: block;width: 64px;height: 64px;float: left;border-radius: 50%;border:1px solid #be6f22;background: #d9812b;}
@@ -118,6 +118,7 @@ body{font-family: 'Open Sans', sans-serif;font-size: 14px;background: #ebebeb;}
 .e-excel span{width: 36px;height: 36px;display: inline-block;background: url(../img/e-excel.png) no-repeat;margin-right: 8px;vertical-align: middle;}
 .e-mail span{width: 36px;height: 36px;display: inline-block;background: url(../img/e-mail.png) no-repeat;margin-right: 8px;vertical-align: middle;}
 .e-cno span{width: 36px;height: 36px;display: inline-block;background: url(../img/e-cno.png) no-repeat;margin-right: 8px;vertical-align: middle;}
+.crear-usuario span{width: 36px;height: 36px;display: inline-block;background: url(../img/crear-usuario.png) no-repeat;margin-right: 8px;vertical-align: middle;}
 .b-list-pag .right ul{margin-top: 0;margin-bottom: 0;}
 .b-list-pag .pagination>li>a, .b-list-pag .pagination>li>span{color: #6686a3;font-size: 16px;font-weight: 700;border:0;padding: 6px;}
 .b-list-pag .pagination>li>a:focus, .b-list-pag .pagination>li>a:hover, .b-list-pag .pagination>li>span:focus, .b-list-pag .pagination>li>span:hover{background: transparent;}
@@ -145,8 +146,8 @@ body{font-family: 'Open Sans', sans-serif;font-size: 14px;background: #ebebeb;}
 .table-tab-b tr td{border-top: 0!important;padding: 10px!important;}
 .table-tab-f{background: transparent!important;}
 .m-form-n h2{margin-bottom: 25px;margin-top: 0;font-size: 22px;color: #d9812b;}
-.modal-custom-n .modal-body{padding: 35px;}
-.m-form-n .form-group>label{text-align: left;padding-top: 0;font-size: 13px;color: #666666;font-weight: 400;}
+.modal-custom-n .modal-body{padding: 30px;}
+.m-form-n .form-group>label, .m-form-n .form-group .row>label{text-align: left;padding-top: 0;font-size: 13px;color: #666666;font-weight: 400;margin-top: 7px;}
 .m-form-n input, .m-form-n select, .m-form-n textarea{border: 2px solid #dbdbdb;border-radius: 7px;color: #666;font-size: 13px;}
 .m-form-n .form-group{margin-bottom: 12px;}
 .btn-mC{height: 30px;line-height: 30px;padding: 0 25px;font-size: 13px;color: #fff;font-weight: 700;border-radius: 7px;}
@@ -160,3 +161,21 @@ body{font-family: 'Open Sans', sans-serif;font-size: 14px;background: #ebebeb;}
 .nav-header .dropdown-menu>li>a:hover, .nav-header .dropdown-menu>li>a.active{background: #cc6b12;}
 .gvCod{border: 2px solid #dbdbdb;border-radius: 7px;width: 178px;height: 36px;}
 .m-form-n>p{color: #666;font-size: 13px;margin-bottom: 20px;margin-top: -10px;}
+.pen{color: #cccccc;}
+.cnt-table-reclamos .filter-b>ul>li:first-child{display: block;width: 100%;}
+.cnt-table-reclamos .adCconsulta{width: 120px;}
+.cnt-m-reclamos{margin-bottom: 25px;}
+.cnt-m-reclamos>ul>li{float: left;margin-right: 8px;}
+.cnt-m-reclamos>ul>li>a{line-height: 48px;padding: 0 18px;font-size: 14px;color: #fff;font-weight: 700;display: block;border-radius: 8px;}
+.cnt-m-reclamos>ul>li>a i{margin-right: 10px;font-size: 22px;vertical-align: middle;}
+.sReclamos{background: #4f9fb9;}
+.dReclamos{background: #d2232a;}
+.sSoluciones{background: #80b824;}
+.modal-custom-alert .modal-body p{color: #d9812b;font-size: 22px;line-height: 130%;margin-top: 38px;margin-bottom: 28px;}
+.modal-custom-alert .btn-mC{height: 38px;line-height: 38px;}
+.modal-custom-alert .modal-body{padding: 42px;}
+.modal-custom-alert .modal-content{border-radius: 12px;}
+@media (min-width: 768px){
+	.modal-dialog{width: 640px;}
+	.modal-custom-alert .modal-dialog{width: 400px;}
+}

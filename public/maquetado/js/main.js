@@ -13,6 +13,7 @@ var obj = {
         if($("#filterS").length>0){
             obj.gvFilterSearch();
             obj.grFilterSearch();
+            obj.adFilterSearch();
         }
         if($("#tableCN").length>0){
             obj.nTable();
@@ -73,6 +74,58 @@ var obj = {
             includeSelectAllOption: true,
             nonSelectedText: 'Ciclo',
             buttonWidth: '118px'
+        });
+    },
+    adFilterSearch: function(){
+        $('#adCiclo').multiselect({
+            includeSelectAllOption: true,
+            nonSelectedText: 'Ciclo',
+            buttonWidth: '108px'
+        });
+        $('#adEIn').multiselect({
+            includeSelectAllOption: true,
+            nonSelectedText: 'Estado inicial',
+            buttonWidth: '108px'
+        });
+        $('#adCodigo').multiselect({
+            includeSelectAllOption: true,
+            nonSelectedText: 'Código',
+            buttonWidth: '118px'
+        });
+        $('#adCNO').multiselect({
+            includeSelectAllOption: true,
+            nonSelectedText: 'Código CNO',
+            buttonWidth: '98px'
+        });
+        $('#adGerencia').multiselect({
+            includeSelectAllOption: true,
+            nonSelectedText: 'Gerencia',
+            buttonWidth: '98px'
+        });
+        $('#adSector').multiselect({
+            includeSelectAllOption: true,
+            nonSelectedText: 'Sector',
+            buttonWidth: '118px'
+        });
+        $('#adFecha').multiselect({
+            includeSelectAllOption: true,
+            nonSelectedText: 'Fecha',
+            buttonWidth: '118px'
+        });
+        $('#adSituacion').multiselect({
+            includeSelectAllOption: true,
+            nonSelectedText: 'Fecha',
+            buttonWidth: '118px'
+        });
+        $('#adEstInicial').multiselect({
+            includeSelectAllOption: true,
+            nonSelectedText: 'Estado inicial',
+            buttonWidth: '125px'
+        });
+        $('#adEstFinal').multiselect({
+            includeSelectAllOption: true,
+            nonSelectedText: 'Estado final',
+            buttonWidth: '125px'
         });
     },
     nTable: function(){
