@@ -7,8 +7,8 @@
   z-index: 1042;
   overflow: hidden;
   position: fixed;
-  background: #0b0b0b;
-  opacity: 0.8; }
+  background: #000;
+  opacity: 0.3; }
 
 .mfp-wrap {
   top: 0;
@@ -59,7 +59,7 @@
   cursor: -moz-zoom-out;
   cursor: -webkit-zoom-out;
   cursor: zoom-out; }
-
+.mfp-zoom-out-cur .mfp-image-holder .mfp-close{display: none;}
 .mfp-zoom {
   cursor: pointer;
   cursor: -webkit-zoom-in;
@@ -68,7 +68,9 @@
 
 .mfp-auto-cursor .mfp-content {
   cursor: auto; }
-
+.mfp-close{
+  display: none;
+}
 .mfp-close,
 .mfp-arrow,
 .mfp-preloader,
@@ -108,7 +110,6 @@ button.mfp-close,
 button.mfp-arrow {
   overflow: visible;
   cursor: pointer;
-  background: transparent;
   border: 0;
   -webkit-appearance: none;
   display: block;
@@ -165,7 +166,7 @@ button::-moz-focus-inner {
 
 .mfp-arrow {
   position: absolute;
-  opacity: 0.65;
+  opacity: 1;
   margin: 0;
   top: 50%;
   margin-top: -55px;
@@ -200,21 +201,19 @@ button::-moz-focus-inner {
     opacity: 0.7; }
 
 .mfp-arrow-left {
-  left: 0; }
-  .mfp-arrow-left:after {
-    border-right: 17px solid #FFF;
-    margin-left: 31px; }
-  .mfp-arrow-left:before {
-    margin-left: 25px;
-    border-right: 27px solid #3F3F3F; }
-
+  left: 0;
+  width: 60px;
+  height: 96px;
+  background: url(../img/left-n.png) no-repeat;
+  margin-left: 60px;
+}
 .mfp-arrow-right {
-  right: 0; }
-  .mfp-arrow-right:after {
-    border-left: 17px solid #FFF;
-    margin-left: 39px; }
-  .mfp-arrow-right:before {
-    border-left: 27px solid #3F3F3F; }
+  right: 0;
+  width: 60px;
+  height: 96px;
+  background: url(../img/rigth-n.png) no-repeat;
+  margin-right: 60px;
+}
 
 .mfp-iframe-holder {
   padding-top: 40px;
@@ -267,7 +266,7 @@ img.mfp-img {
     height: auto;
     z-index: -1;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
-    background: #444; }
+    background: #000; }
   .mfp-figure small {
     color: #BDBDBD;
     display: block;
@@ -282,7 +281,9 @@ img.mfp-img {
   top: 100%;
   left: 0;
   width: 100%;
-  cursor: auto; }
+  cursor: auto;
+  display: none;
+}
 
 .mfp-title {
   text-align: left;

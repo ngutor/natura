@@ -12,10 +12,12 @@ var obj = {
         /*Filtro de Usario GV*/
         if($("#filterS").length>0){
             obj.gvFilterSearch();
+            obj.grFilterSearch();
         }
         if($("#tableCN").length>0){
             obj.nTable();
         }
+        /**/
 	},
 	filterSearch: function(){
 		$('#fCodigo').multiselect({
@@ -42,7 +44,7 @@ var obj = {
         });
         $('#gvSector').multiselect({
             includeSelectAllOption: true,
-            nonSelectedText: 'Código CNO',
+            nonSelectedText: 'Sector',
             buttonWidth: '118px'
         });
         $('#gvcCNO').multiselect({
@@ -53,6 +55,23 @@ var obj = {
         $('#gvSituacion').multiselect({
             includeSelectAllOption: true,
             nonSelectedText: 'Situación',
+            buttonWidth: '118px'
+        });
+    },
+    grFilterSearch: function(){
+        $('#eInicial').multiselect({
+            includeSelectAllOption: true,
+            nonSelectedText: 'Estado',
+            buttonWidth: '128px'
+        });
+        $('#grcCNO').multiselect({
+            includeSelectAllOption: true,
+            nonSelectedText: 'Código CNO',
+            buttonWidth: '118px'
+        });
+        $('#grCiclo').multiselect({
+            includeSelectAllOption: true,
+            nonSelectedText: 'Ciclo',
             buttonWidth: '118px'
         });
     },
