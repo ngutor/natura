@@ -11,6 +11,17 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+/*Route::get("/", function () {
+    return view("welcome");
+});*/
+
+Route::get("psw", function() {
+	return Hash::make(env("APP_DEFAULT_PSW"));
+});
+Route::get("/", "Intranet@home");
+Route::get("login", "Publico@login");
+
+//ws
+Route::group(["prefix" => "ajax", "namespace" => "Ws"], function() {
+	Route::post("login", "Ajax@validate_login");
 });
