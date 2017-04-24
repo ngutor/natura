@@ -89,7 +89,7 @@ var obj = {
         });
         $('#adCodigo').multiselect({
             includeSelectAllOption: true,
-            nonSelectedText: 'Código',
+            nonSelectedText: 'Ciclo', //modificacion
             buttonWidth: '118px'
         });
         $('#adCNO').multiselect({

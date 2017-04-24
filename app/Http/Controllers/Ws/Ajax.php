@@ -49,6 +49,11 @@ class Ajax extends Controller {
                         "token" => $response->token
                     ]);
                 }
+                else {
+                    DB::table("users")
+                        ->where("cod_usuario", $data->cod_usuario)
+                        ->update(["token" => $response->token]);
+                }
                 if(Auth::attempt(["cod_usuario" => $data->cod_usuario, "password" => env("APP_DEFAULT_PSW")], true)) {
                     return Response::json([
                         "success" => true

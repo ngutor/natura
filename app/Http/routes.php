@@ -20,6 +20,10 @@ Route::get("psw", function() {
 });
 Route::get("/", "Intranet@home");
 Route::get("login", "Publico@login");
+Route::get("revistas", "Intranet@revistas");
+Route::get("indicadores/entrega", "Intranet@indicadores_entrega");
+Route::get("indicadores/reclamos", "Intranet@indicadores_reclamos");
+Route::get("logout", "Intranet@logout");
 
 //ws
 Route::group(["prefix" => "ajax", "namespace" => "Ws"], function() {

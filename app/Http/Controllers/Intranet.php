@@ -21,12 +21,36 @@ class Intranet extends Controller {
     }
 
     public function home() {
-        //return "zona de usuarios<br/>Tipo: " . Auth::user()->tp_cliente;
-        /*Auth::logout();
-        return redirect("login");*/
         $user = Auth::user();
-        $arrData = ["user" => $user];
+        $arrData = ["user" => $user, "idx" => 0];
         return view($user->tp_cliente . ".index")->with($arrData);
+    }
+
+    public function revistas() {
+        $user = Auth::user();
+        $arrData = [
+            "user" => $user,
+            "idx" => 1,
+            "route_i" => env("APP_WS") . "/client/indicadores/entrega-ini",
+            "route_d" => env("APP_WS") . "/client/revistas/busca",
+            "route_det" => env("APP_WS") . "/client/revistas/detalle"
+        ];
+        return view($user->tp_cliente . ".revistas")->with($arrData);
+    }
+
+    public function indicadores_entrega() {
+        $user = Auth::user();
+        $arrData = [
+            "user" => $user,
+            "idx" => 4,
+            "route_i" => env("APP_WS") . "/client/indicadores/entrega-ini"
+        ];
+        return view($user->tp_cliente . ".indicadores-entrega")->with($arrData);
+    }
+
+    public function logout() {
+        Auth::logout();
+        return redirect("login");
     }
 
 }
