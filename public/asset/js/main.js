@@ -19,6 +19,7 @@ var obj = {
             obj.nTable();
         }
         /**/
+        obj.menuMovil();
 	},
 	filterSearch: function(){
 		$('#fCodigo').multiselect({
@@ -149,6 +150,9 @@ var obj = {
                 }
             }
         });
+    },
+    menuMovil: function(){
+        $('.drawer').drawer();
     },
     nDonut: function(){
         console.log("hik");
