@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap-multiselect.css">
     <link rel="stylesheet" href="../css/magnific-popup.css?v1">
+    <link rel="stylesheet" type="text/css" href="../css/drawer.min.css">
     <link rel="stylesheet" href="../css/style.css?v2">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -19,8 +20,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-
-<body>
+<body class="drawer drawer--right">
     <div id="main">
         <div class="container">
             <header class="header fluid-list">
@@ -42,6 +42,10 @@
                             </div>
                         </div>
                     </div>
+                    <button type="button" class="drawer-toggle drawer-hamburger">
+                        <span class="sr-only">toggle navigation</span>
+                        <span class="drawer-hamburger-icon"></span>
+                    </button>
                 </div>
                 <div class="fluid-list nav-header">
                     <ul class="reset-ul">
@@ -59,6 +63,58 @@
                         <li><a href="#">Administración de Usuarios</a></li>
                     </ul>
                 </div>
+                <nav class="drawer-nav" role="navigation">
+                    <div>
+                        <div class="fluid-list cnt-menu-user">
+                            <div class="user-nav">
+                                <span class="center"><i class="fa fa-user" aria-hidden="true"></i></span>
+                                <div class="user-list navbar-right">
+                                    <span>Bienvenid@</span>
+                                    <h4>Guiliana Burga</h4>
+                                </div>
+                            </div>
+                            <div class="jr-d">
+                                <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+                                <div class="sector-n">
+                                    <span>Sector:</span>
+                                    <p>Nombre del Sector:</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fluid-list cnt-list-menu-d">
+                            <ul class="reset-ul">
+                                <li>
+                                    <a href="#">Inicio</a>
+                                </li>
+                                <li>
+                                    <a href="#">Mi perfil</a>
+                                </li>
+                                <li>
+                                    <a href="#">Mis revistas</a>
+                                </li>
+                                <li>
+                                    <a href="#">Auditoría</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="active">Reclamos</a>
+                                </li>
+                                <li>
+                                    <a href="#">Mis indicadores</a>
+                                    <ul class="reset-ul">
+                                        <li><a href="#">Efectividad de entrega</a></li>
+                                        <li><a href="#">Gestión de reclamos</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">Administración de Usuarios</a>
+                                </li>
+                                <li>
+                                    <a href="#">Cerrar sesión</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
             </header>
             <div class="fluid-list cnt-container">
                 <div class="fluid-list bread-n">
@@ -229,464 +285,466 @@
                         </ul>
                     </div>
                     <div class="fluid-list cnt-table-n">
-                        <table id="tableCN" class="table table-condensed table-custom-n" style="border-collapse:collapse;">
-                            <thead>
-                                <tr>
-                                    <th>Ciclo</th>
-                                    <th>Consultora</th>
-                                    <th>F. Reclamo</th>
-                                    <th>Generado por</th>
-                                    <th class="center">D. Resol.</th>
-                                    <th>Est. Inicial</th>
-                                    <th>Est. Final</th>
-                                    <th class="center">Reclamo</th>
-                                    <th class="center">Descargar</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td data-toggle="collapse" data-target="#n1">2017-02-06</td>
-                                    <td data-toggle="collapse" data-target="#n1">23456789</td>
-                                    <td data-toggle="collapse" data-target="#n1">19/2/2017</td>
-                                    <td data-toggle="collapse" data-target="#n1">Juliana Alvarez</td>
-                                    <td data-toggle="collapse" data-target="#n1" class="center">2</td>
-                                    <td data-toggle="collapse" data-target="#n1">Pendiente</td>
-                                    <td data-toggle="collapse" data-target="#n1">Procede</td>
-                                    <td class="center"><a href="#" data-toggle="modal" data-target="#tModalR"><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></td>
-                                    <td class="center"><a href="#"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a></td>
-                                </tr>
-                                <tr class="tableHidden">
-                                    <td colspan="9" class="hiddenRow">
-                                        <div id="n1" class="collapse cnt-int-c">
-                                            <ul class="nav nav-tabs" role="tablist">
-                                                <li role="presentation" class="active"><a href="#datoB1" aria-controls="home" role="tab" data-toggle="tab">Datos básicos</a></li>
-                                                <li role="presentation"><a href="#traking1" aria-controls="profile" role="tab" data-toggle="tab">Tracking del envío</a></li>
-                                            </ul>
-                                            <div class="tab-content">
-                                                <div role="tabpanel" class="tab-pane active" id="datoB1">
-                                                    <table class="table table-tab-b">
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>Nombre:</td>
-                                                                <td>Lorem ipsum dolor sit amet</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Inactividad:</td>
-                                                                <td>Lorem ipsum dolor sit amet</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Dirección:</td>
-                                                                <td>Lorem ipsum dolor sit amet</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Distrito:</td>
-                                                                <td>San Miguel</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Teléfono:</td>
-                                                                <td>675-7857</td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                                <div role="tabpanel" class="tab-pane" id="traking1">
-                                                    <table class="table table-tab-f">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>Fecha</th>
-                                                                <th>Estado</th>
-                                                                <th>Observación</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>19/2/2017 - 09:34</td>
-                                                                <td>Captación</td>
-                                                                <td>Lorem ipsum dolor sit amet, consectetur</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>19/2/2017 - 09:34</td>
-                                                                <td>Aprobado</td>
-                                                                <td>Lorem ipsum dolor sit amet, consectetur</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>19/2/2017 - 09:34</td>
-                                                                <td>Separación</td>
-                                                                <td></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>19/2/2017 - 09:34</td>
-                                                                <td>Transporte</td>
-                                                                <td></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>19/2/2017 - 09:34</td>
-                                                                <td>Entregado <i class="fa fa-motorcycle" aria-hidden="true" style="color: #000;font-size: 25px;"></i></td>
-                                                                <td>
-                                                                    <div class="popup-gallery list-img-v">
-                                                                        <a href="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_b.jpg" title="The Cleaner">Ver Fotos</a>
-                                                                        <a href="http://farm9.staticflickr.com/8382/8558295631_0f56c1284f_b.jpg" title="Winter Dance">Ver Fotos</a>
-                                                                        <a href="http://farm9.staticflickr.com/8382/8558295631_0f56c1284f_b.jpg" title="Winter Dance">Ver Fotos</a>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-toggle="collapse" data-target="#n2">2017-02-06</td>
-                                    <td data-toggle="collapse" data-target="#n2">23456789</td>
-                                    <td data-toggle="collapse" data-target="#n2">19/2/2017</td>
-                                    <td data-toggle="collapse" data-target="#n2">Juliana Alvarez</td>
-                                    <td data-toggle="collapse" data-target="#n2" class="center">2</td>
-                                    <td data-toggle="collapse" data-target="#n2">Resuelto</td>
-                                    <td data-toggle="collapse" data-target="#n2">Procede</td>
-                                    <td class="center"><a href="#" data-toggle="modal" data-target="#tModalR"><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></td>
-                                    <td class="center"><a href="#"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a></td>
-                                </tr>
-                                <tr class="tableHidden">
-                                    <td colspan="9" class="hiddenRow">
-                                        <div id="n2" class="collapse cnt-int-c">
-                                            <ul class="nav nav-tabs" role="tablist">
-                                                <li role="presentation" class="active"><a href="#datoB2" aria-controls="home" role="tab" data-toggle="tab">Datos básicos</a></li>
-                                                <li role="presentation"><a href="#traking2" aria-controls="profile" role="tab" data-toggle="tab">Tracking del envío</a></li>
-                                            </ul>
-                                            <div class="tab-content">
-                                                <div role="tabpanel" class="tab-pane active" id="datoB2">
-                                                    <table class="table table-tab-b">
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>Nombre:</td>
-                                                                <td>Lorem ipsum dolor sit amet</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Inactividad:</td>
-                                                                <td>Lorem ipsum dolor sit amet</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Dirección:</td>
-                                                                <td>Lorem ipsum dolor sit amet</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Distrito:</td>
-                                                                <td>San Miguel</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Teléfono:</td>
-                                                                <td>675-7857</td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                                <div role="tabpanel" class="tab-pane" id="traking2">
-                                                    <table class="table table-tab-f">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>Fecha</th>
-                                                                <th>Estado</th>
-                                                                <th>Observación</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>19/2/2017 - 09:34</td>
-                                                                <td>Captación</td>
-                                                                <td>Lorem ipsum dolor sit amet, consectetur</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>19/2/2017 - 09:34</td>
-                                                                <td>Aprobado</td>
-                                                                <td>Lorem ipsum dolor sit amet, consectetur</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>19/2/2017 - 09:34</td>
-                                                                <td>Separación</td>
-                                                                <td></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>19/2/2017 - 09:34</td>
-                                                                <td>Transporte</td>
-                                                                <td></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>19/2/2017 - 09:34</td>
-                                                                <td>Entregado <i class="fa fa-motorcycle" aria-hidden="true" style="color: #000;font-size: 25px;"></i></td>
-                                                                <td></td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
+                        <div class="table-responsive">
+                            <table id="tableCN" class="table table-condensed table-custom-n" style="border-collapse:collapse;">
+                                <thead>
+                                    <tr>
+                                        <th>Ciclo</th>
+                                        <th>Consultora</th>
+                                        <th>F. Reclamo</th>
+                                        <th>Generado por</th>
+                                        <th class="center">D. Resol.</th>
+                                        <th>Est. Inicial</th>
+                                        <th>Est. Final</th>
+                                        <th class="center">Reclamo</th>
+                                        <th class="center">Descargar</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td data-toggle="collapse" data-target="#n1">2017-02-06</td>
+                                        <td data-toggle="collapse" data-target="#n1">23456789</td>
+                                        <td data-toggle="collapse" data-target="#n1">19/2/2017</td>
+                                        <td data-toggle="collapse" data-target="#n1">Juliana Alvarez</td>
+                                        <td data-toggle="collapse" data-target="#n1" class="center">2</td>
+                                        <td data-toggle="collapse" data-target="#n1">Pendiente</td>
+                                        <td data-toggle="collapse" data-target="#n1">Procede</td>
+                                        <td class="center"><a href="#" data-toggle="modal" data-target="#tModalR"><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></td>
+                                        <td class="center"><a href="#"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a></td>
+                                    </tr>
+                                    <tr class="tableHidden">
+                                        <td colspan="9" class="hiddenRow">
+                                            <div id="n1" class="collapse cnt-int-c">
+                                                <ul class="nav nav-tabs" role="tablist">
+                                                    <li role="presentation" class="active"><a href="#datoB1" aria-controls="home" role="tab" data-toggle="tab">Datos básicos</a></li>
+                                                    <li role="presentation"><a href="#traking1" aria-controls="profile" role="tab" data-toggle="tab">Tracking del envío</a></li>
+                                                </ul>
+                                                <div class="tab-content">
+                                                    <div role="tabpanel" class="tab-pane active" id="datoB1">
+                                                        <table class="table table-tab-b">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Nombre:</td>
+                                                                    <td>Lorem ipsum dolor sit amet</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Inactividad:</td>
+                                                                    <td>Lorem ipsum dolor sit amet</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Dirección:</td>
+                                                                    <td>Lorem ipsum dolor sit amet</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Distrito:</td>
+                                                                    <td>San Miguel</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Teléfono:</td>
+                                                                    <td>675-7857</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div role="tabpanel" class="tab-pane" id="traking1">
+                                                        <table class="table table-tab-f">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Fecha</th>
+                                                                    <th>Estado</th>
+                                                                    <th>Observación</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>19/2/2017 - 09:34</td>
+                                                                    <td>Captación</td>
+                                                                    <td>Lorem ipsum dolor sit amet, consectetur</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>19/2/2017 - 09:34</td>
+                                                                    <td>Aprobado</td>
+                                                                    <td>Lorem ipsum dolor sit amet, consectetur</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>19/2/2017 - 09:34</td>
+                                                                    <td>Separación</td>
+                                                                    <td></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>19/2/2017 - 09:34</td>
+                                                                    <td>Transporte</td>
+                                                                    <td></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>19/2/2017 - 09:34</td>
+                                                                    <td>Entregado <i class="fa fa-motorcycle" aria-hidden="true" style="color: #000;font-size: 25px;"></i></td>
+                                                                    <td>
+                                                                        <div class="popup-gallery list-img-v">
+                                                                            <a href="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_b.jpg" title="The Cleaner">Ver Fotos</a>
+                                                                            <a href="http://farm9.staticflickr.com/8382/8558295631_0f56c1284f_b.jpg" title="Winter Dance">Ver Fotos</a>
+                                                                            <a href="http://farm9.staticflickr.com/8382/8558295631_0f56c1284f_b.jpg" title="Winter Dance">Ver Fotos</a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-toggle="collapse" data-target="#n3">2017-02-06</td>
-                                    <td data-toggle="collapse" data-target="#n3">23456789</td>
-                                    <td data-toggle="collapse" data-target="#n3">19/2/2017</td>
-                                    <td data-toggle="collapse" data-target="#n3">Juliana Alvarez</td>
-                                    <td data-toggle="collapse" data-target="#n3" class="center">2</td>
-                                    <td data-toggle="collapse" data-target="#n3">Verificación</td>
-                                    <td data-toggle="collapse" data-target="#n3">No procede</td>
-                                    <td class="center"><a href="#" data-toggle="modal" data-target="#tModalR"><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></td>
-                                    <td class="center"><a href="#"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a></td>
-                                </tr>
-                                <tr class="tableHidden">
-                                    <td colspan="9" class="hiddenRow">
-                                        <div id="n3" class="collapse cnt-int-c">
-                                            <ul class="nav nav-tabs" role="tablist">
-                                                <li role="presentation" class="active"><a href="#datoB3" aria-controls="home" role="tab" data-toggle="tab">Datos básicos</a></li>
-                                                <li role="presentation"><a href="#traking3" aria-controls="profile" role="tab" data-toggle="tab">Tracking del envío</a></li>
-                                            </ul>
-                                            <div class="tab-content">
-                                                <div role="tabpanel" class="tab-pane active" id="datoB3">
-                                                    <table class="table table-tab-b">
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>Nombre:</td>
-                                                                <td>Lorem ipsum dolor sit amet</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Inactividad:</td>
-                                                                <td>Lorem ipsum dolor sit amet</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Dirección:</td>
-                                                                <td>Lorem ipsum dolor sit amet</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Distrito:</td>
-                                                                <td>San Miguel</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Teléfono:</td>
-                                                                <td>675-7857</td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                                <div role="tabpanel" class="tab-pane" id="traking3">
-                                                    <table class="table table-tab-f">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>Fecha</th>
-                                                                <th>Estado</th>
-                                                                <th>Observación</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>19/2/2017 - 09:34</td>
-                                                                <td>Captación</td>
-                                                                <td>Lorem ipsum dolor sit amet, consectetur</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>19/2/2017 - 09:34</td>
-                                                                <td>Aprobado</td>
-                                                                <td>Lorem ipsum dolor sit amet, consectetur</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>19/2/2017 - 09:34</td>
-                                                                <td>Separación</td>
-                                                                <td></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>19/2/2017 - 09:34</td>
-                                                                <td>Transporte</td>
-                                                                <td></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>19/2/2017 - 09:34</td>
-                                                                <td>Entregado <i class="fa fa-motorcycle" aria-hidden="true" style="color: #000;font-size: 25px;"></i></td>
-                                                                <td></td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-toggle="collapse" data-target="#n4">2017-02-06</td>
-                                    <td data-toggle="collapse" data-target="#n4">23456789</td>
-                                    <td data-toggle="collapse" data-target="#n4">19/2/2017</td>
-                                    <td data-toggle="collapse" data-target="#n4">Juliana Alvarez</td>
-                                    <td data-toggle="collapse" data-target="#n4" class="center">2</td>
-                                    <td data-toggle="collapse" data-target="#n4">Resuelto</td>
-                                    <td data-toggle="collapse" data-target="#n4">Procede</td>
-                                    <td class="center"><a href="#" data-toggle="modal" data-target="#tModalR"><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></td>
-                                    <td class="center"><a href="#"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a></td>
-                                </tr>
-                                <tr class="tableHidden">
-                                    <td colspan="9" class="hiddenRow">
-                                        <div id="n4" class="collapse cnt-int-c">
-                                            <ul class="nav nav-tabs" role="tablist">
-                                                <li role="presentation" class="active"><a href="#datoB4" aria-controls="home" role="tab" data-toggle="tab">Datos básicos</a></li>
-                                                <li role="presentation"><a href="#traking4" aria-controls="profile" role="tab" data-toggle="tab">Tracking del envío</a></li>
-                                            </ul>
-                                            <div class="tab-content">
-                                                <div role="tabpanel" class="tab-pane active" id="datoB4">
-                                                    <table class="table table-tab-b">
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>Nombre:</td>
-                                                                <td>Lorem ipsum dolor sit amet</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Inactividad:</td>
-                                                                <td>Lorem ipsum dolor sit amet</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Dirección:</td>
-                                                                <td>Lorem ipsum dolor sit amet</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Distrito:</td>
-                                                                <td>San Miguel</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Teléfono:</td>
-                                                                <td>675-7857</td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                                <div role="tabpanel" class="tab-pane" id="traking4">
-                                                    <table class="table table-tab-f">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>Fecha</th>
-                                                                <th>Estado</th>
-                                                                <th>Observación</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>19/2/2017 - 09:34</td>
-                                                                <td>Captación</td>
-                                                                <td>Lorem ipsum dolor sit amet, consectetur</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>19/2/2017 - 09:34</td>
-                                                                <td>Aprobado</td>
-                                                                <td>Lorem ipsum dolor sit amet, consectetur</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>19/2/2017 - 09:34</td>
-                                                                <td>Separación</td>
-                                                                <td></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>19/2/2017 - 09:34</td>
-                                                                <td>Transporte</td>
-                                                                <td></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>19/2/2017 - 09:34</td>
-                                                                <td>Entregado <i class="fa fa-motorcycle" aria-hidden="true" style="color: #000;font-size: 25px;"></i></td>
-                                                                <td></td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-toggle="collapse" data-target="#n2">2017-02-06</td>
+                                        <td data-toggle="collapse" data-target="#n2">23456789</td>
+                                        <td data-toggle="collapse" data-target="#n2">19/2/2017</td>
+                                        <td data-toggle="collapse" data-target="#n2">Juliana Alvarez</td>
+                                        <td data-toggle="collapse" data-target="#n2" class="center">2</td>
+                                        <td data-toggle="collapse" data-target="#n2">Resuelto</td>
+                                        <td data-toggle="collapse" data-target="#n2">Procede</td>
+                                        <td class="center"><a href="#" data-toggle="modal" data-target="#tModalR"><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></td>
+                                        <td class="center"><a href="#"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a></td>
+                                    </tr>
+                                    <tr class="tableHidden">
+                                        <td colspan="9" class="hiddenRow">
+                                            <div id="n2" class="collapse cnt-int-c">
+                                                <ul class="nav nav-tabs" role="tablist">
+                                                    <li role="presentation" class="active"><a href="#datoB2" aria-controls="home" role="tab" data-toggle="tab">Datos básicos</a></li>
+                                                    <li role="presentation"><a href="#traking2" aria-controls="profile" role="tab" data-toggle="tab">Tracking del envío</a></li>
+                                                </ul>
+                                                <div class="tab-content">
+                                                    <div role="tabpanel" class="tab-pane active" id="datoB2">
+                                                        <table class="table table-tab-b">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Nombre:</td>
+                                                                    <td>Lorem ipsum dolor sit amet</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Inactividad:</td>
+                                                                    <td>Lorem ipsum dolor sit amet</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Dirección:</td>
+                                                                    <td>Lorem ipsum dolor sit amet</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Distrito:</td>
+                                                                    <td>San Miguel</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Teléfono:</td>
+                                                                    <td>675-7857</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div role="tabpanel" class="tab-pane" id="traking2">
+                                                        <table class="table table-tab-f">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Fecha</th>
+                                                                    <th>Estado</th>
+                                                                    <th>Observación</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>19/2/2017 - 09:34</td>
+                                                                    <td>Captación</td>
+                                                                    <td>Lorem ipsum dolor sit amet, consectetur</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>19/2/2017 - 09:34</td>
+                                                                    <td>Aprobado</td>
+                                                                    <td>Lorem ipsum dolor sit amet, consectetur</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>19/2/2017 - 09:34</td>
+                                                                    <td>Separación</td>
+                                                                    <td></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>19/2/2017 - 09:34</td>
+                                                                    <td>Transporte</td>
+                                                                    <td></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>19/2/2017 - 09:34</td>
+                                                                    <td>Entregado <i class="fa fa-motorcycle" aria-hidden="true" style="color: #000;font-size: 25px;"></i></td>
+                                                                    <td></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-toggle="collapse" data-target="#n5">2017-02-06</td>
-                                    <td data-toggle="collapse" data-target="#n5">23456789</td>
-                                    <td data-toggle="collapse" data-target="#n5">19/2/2017</td>
-                                    <td data-toggle="collapse" data-target="#n5">Juliana Alvarez</td>
-                                    <td data-toggle="collapse" data-target="#n5" class="center">2</td>
-                                    <td data-toggle="collapse" data-target="#n5">Pendiente</td>
-                                    <td data-toggle="collapse" data-target="#n5">No procede</td>
-                                    <td class="center"><a href="#" data-toggle="modal" data-target="#tModalR"><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></td>
-                                    <td class="center"><a href="#"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a></td>
-                                </tr>
-                                <tr class="tableHidden">
-                                    <td colspan="9" class="hiddenRow">
-                                        <div id="n5" class="collapse cnt-int-c">
-                                            <ul class="nav nav-tabs" role="tablist">
-                                                <li role="presentation" class="active"><a href="#datoB5" aria-controls="home" role="tab" data-toggle="tab">Datos básicos</a></li>
-                                                <li role="presentation"><a href="#traking5" aria-controls="profile" role="tab" data-toggle="tab">Tracking del envío</a></li>
-                                            </ul>
-                                            <div class="tab-content">
-                                                <div role="tabpanel" class="tab-pane active" id="datoB5">
-                                                    <table class="table table-tab-b">
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>Nombre:</td>
-                                                                <td>Lorem ipsum dolor sit amet</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Inactividad:</td>
-                                                                <td>Lorem ipsum dolor sit amet</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Dirección:</td>
-                                                                <td>Lorem ipsum dolor sit amet</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Distrito:</td>
-                                                                <td>San Miguel</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Teléfono:</td>
-                                                                <td>675-7857</td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                                <div role="tabpanel" class="tab-pane" id="traking5">
-                                                    <table class="table table-tab-f">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>Fecha</th>
-                                                                <th>Estado</th>
-                                                                <th>Observación</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>19/2/2017 - 09:34</td>
-                                                                <td>Captación</td>
-                                                                <td>Lorem ipsum dolor sit amet, consectetur</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>19/2/2017 - 09:34</td>
-                                                                <td>Aprobado</td>
-                                                                <td>Lorem ipsum dolor sit amet, consectetur</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>19/2/2017 - 09:34</td>
-                                                                <td>Separación</td>
-                                                                <td></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>19/2/2017 - 09:34</td>
-                                                                <td>Transporte</td>
-                                                                <td></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>19/2/2017 - 09:34</td>
-                                                                <td>Entregado <i class="fa fa-motorcycle" aria-hidden="true" style="color: #000;font-size: 25px;"></i></td>
-                                                                <td></td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-toggle="collapse" data-target="#n3">2017-02-06</td>
+                                        <td data-toggle="collapse" data-target="#n3">23456789</td>
+                                        <td data-toggle="collapse" data-target="#n3">19/2/2017</td>
+                                        <td data-toggle="collapse" data-target="#n3">Juliana Alvarez</td>
+                                        <td data-toggle="collapse" data-target="#n3" class="center">2</td>
+                                        <td data-toggle="collapse" data-target="#n3">Verificación</td>
+                                        <td data-toggle="collapse" data-target="#n3">No procede</td>
+                                        <td class="center"><a href="#" data-toggle="modal" data-target="#tModalR"><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></td>
+                                        <td class="center"><a href="#"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a></td>
+                                    </tr>
+                                    <tr class="tableHidden">
+                                        <td colspan="9" class="hiddenRow">
+                                            <div id="n3" class="collapse cnt-int-c">
+                                                <ul class="nav nav-tabs" role="tablist">
+                                                    <li role="presentation" class="active"><a href="#datoB3" aria-controls="home" role="tab" data-toggle="tab">Datos básicos</a></li>
+                                                    <li role="presentation"><a href="#traking3" aria-controls="profile" role="tab" data-toggle="tab">Tracking del envío</a></li>
+                                                </ul>
+                                                <div class="tab-content">
+                                                    <div role="tabpanel" class="tab-pane active" id="datoB3">
+                                                        <table class="table table-tab-b">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Nombre:</td>
+                                                                    <td>Lorem ipsum dolor sit amet</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Inactividad:</td>
+                                                                    <td>Lorem ipsum dolor sit amet</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Dirección:</td>
+                                                                    <td>Lorem ipsum dolor sit amet</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Distrito:</td>
+                                                                    <td>San Miguel</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Teléfono:</td>
+                                                                    <td>675-7857</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div role="tabpanel" class="tab-pane" id="traking3">
+                                                        <table class="table table-tab-f">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Fecha</th>
+                                                                    <th>Estado</th>
+                                                                    <th>Observación</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>19/2/2017 - 09:34</td>
+                                                                    <td>Captación</td>
+                                                                    <td>Lorem ipsum dolor sit amet, consectetur</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>19/2/2017 - 09:34</td>
+                                                                    <td>Aprobado</td>
+                                                                    <td>Lorem ipsum dolor sit amet, consectetur</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>19/2/2017 - 09:34</td>
+                                                                    <td>Separación</td>
+                                                                    <td></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>19/2/2017 - 09:34</td>
+                                                                    <td>Transporte</td>
+                                                                    <td></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>19/2/2017 - 09:34</td>
+                                                                    <td>Entregado <i class="fa fa-motorcycle" aria-hidden="true" style="color: #000;font-size: 25px;"></i></td>
+                                                                    <td></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-toggle="collapse" data-target="#n4">2017-02-06</td>
+                                        <td data-toggle="collapse" data-target="#n4">23456789</td>
+                                        <td data-toggle="collapse" data-target="#n4">19/2/2017</td>
+                                        <td data-toggle="collapse" data-target="#n4">Juliana Alvarez</td>
+                                        <td data-toggle="collapse" data-target="#n4" class="center">2</td>
+                                        <td data-toggle="collapse" data-target="#n4">Resuelto</td>
+                                        <td data-toggle="collapse" data-target="#n4">Procede</td>
+                                        <td class="center"><a href="#" data-toggle="modal" data-target="#tModalR"><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></td>
+                                        <td class="center"><a href="#"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a></td>
+                                    </tr>
+                                    <tr class="tableHidden">
+                                        <td colspan="9" class="hiddenRow">
+                                            <div id="n4" class="collapse cnt-int-c">
+                                                <ul class="nav nav-tabs" role="tablist">
+                                                    <li role="presentation" class="active"><a href="#datoB4" aria-controls="home" role="tab" data-toggle="tab">Datos básicos</a></li>
+                                                    <li role="presentation"><a href="#traking4" aria-controls="profile" role="tab" data-toggle="tab">Tracking del envío</a></li>
+                                                </ul>
+                                                <div class="tab-content">
+                                                    <div role="tabpanel" class="tab-pane active" id="datoB4">
+                                                        <table class="table table-tab-b">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Nombre:</td>
+                                                                    <td>Lorem ipsum dolor sit amet</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Inactividad:</td>
+                                                                    <td>Lorem ipsum dolor sit amet</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Dirección:</td>
+                                                                    <td>Lorem ipsum dolor sit amet</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Distrito:</td>
+                                                                    <td>San Miguel</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Teléfono:</td>
+                                                                    <td>675-7857</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div role="tabpanel" class="tab-pane" id="traking4">
+                                                        <table class="table table-tab-f">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Fecha</th>
+                                                                    <th>Estado</th>
+                                                                    <th>Observación</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>19/2/2017 - 09:34</td>
+                                                                    <td>Captación</td>
+                                                                    <td>Lorem ipsum dolor sit amet, consectetur</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>19/2/2017 - 09:34</td>
+                                                                    <td>Aprobado</td>
+                                                                    <td>Lorem ipsum dolor sit amet, consectetur</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>19/2/2017 - 09:34</td>
+                                                                    <td>Separación</td>
+                                                                    <td></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>19/2/2017 - 09:34</td>
+                                                                    <td>Transporte</td>
+                                                                    <td></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>19/2/2017 - 09:34</td>
+                                                                    <td>Entregado <i class="fa fa-motorcycle" aria-hidden="true" style="color: #000;font-size: 25px;"></i></td>
+                                                                    <td></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-toggle="collapse" data-target="#n5">2017-02-06</td>
+                                        <td data-toggle="collapse" data-target="#n5">23456789</td>
+                                        <td data-toggle="collapse" data-target="#n5">19/2/2017</td>
+                                        <td data-toggle="collapse" data-target="#n5">Juliana Alvarez</td>
+                                        <td data-toggle="collapse" data-target="#n5" class="center">2</td>
+                                        <td data-toggle="collapse" data-target="#n5">Pendiente</td>
+                                        <td data-toggle="collapse" data-target="#n5">No procede</td>
+                                        <td class="center"><a href="#" data-toggle="modal" data-target="#tModalR"><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></td>
+                                        <td class="center"><a href="#"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a></td>
+                                    </tr>
+                                    <tr class="tableHidden">
+                                        <td colspan="9" class="hiddenRow">
+                                            <div id="n5" class="collapse cnt-int-c">
+                                                <ul class="nav nav-tabs" role="tablist">
+                                                    <li role="presentation" class="active"><a href="#datoB5" aria-controls="home" role="tab" data-toggle="tab">Datos básicos</a></li>
+                                                    <li role="presentation"><a href="#traking5" aria-controls="profile" role="tab" data-toggle="tab">Tracking del envío</a></li>
+                                                </ul>
+                                                <div class="tab-content">
+                                                    <div role="tabpanel" class="tab-pane active" id="datoB5">
+                                                        <table class="table table-tab-b">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Nombre:</td>
+                                                                    <td>Lorem ipsum dolor sit amet</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Inactividad:</td>
+                                                                    <td>Lorem ipsum dolor sit amet</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Dirección:</td>
+                                                                    <td>Lorem ipsum dolor sit amet</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Distrito:</td>
+                                                                    <td>San Miguel</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Teléfono:</td>
+                                                                    <td>675-7857</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div role="tabpanel" class="tab-pane" id="traking5">
+                                                        <table class="table table-tab-f">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Fecha</th>
+                                                                    <th>Estado</th>
+                                                                    <th>Observación</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>19/2/2017 - 09:34</td>
+                                                                    <td>Captación</td>
+                                                                    <td>Lorem ipsum dolor sit amet, consectetur</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>19/2/2017 - 09:34</td>
+                                                                    <td>Aprobado</td>
+                                                                    <td>Lorem ipsum dolor sit amet, consectetur</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>19/2/2017 - 09:34</td>
+                                                                    <td>Separación</td>
+                                                                    <td></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>19/2/2017 - 09:34</td>
+                                                                    <td>Transporte</td>
+                                                                    <td></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>19/2/2017 - 09:34</td>
+                                                                    <td>Entregado <i class="fa fa-motorcycle" aria-hidden="true" style="color: #000;font-size: 25px;"></i></td>
+                                                                    <td></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                         <!--Modal de Observaciones-->
                         <div class="modal fade modal-custom-n" id="tModalR" tabindex="-1" role="dialog" aria-labelledby="tModalLabel">
                             <div class="modal-dialog" role="document">
@@ -785,6 +843,8 @@
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/bootstrap-multiselect.js"></script>
     <script src="../js/jquery.magnific-popup.min.js"></script>
+    <script src="../js/iscroll.js"></script>
+    <script src="../js/drawer.min.js"></script>
     <script src="../js/main.js?v2"></script>
 </body>
 </html>

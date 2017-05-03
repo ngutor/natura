@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,700i" rel="stylesheet">
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/drawer.min.css">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap-multiselect.css">
     <link rel="stylesheet" href="../css/magnific-popup.css">
     <link rel="stylesheet" href="../css/style.css">
@@ -19,8 +20,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-
-<body>
+<body class="drawer drawer--right">
     <div id="main">
         <div class="container">
             <header class="header fluid-list">
@@ -48,6 +48,10 @@
                             </div>
                         </div>
                     </div>
+                    <button type="button" class="drawer-toggle drawer-hamburger">
+                        <span class="sr-only">toggle navigation</span>
+                        <span class="drawer-hamburger-icon"></span>
+                    </button>
                 </div>
                 <div class="fluid-list nav-header">
                     <ul class="reset-ul">
@@ -56,6 +60,45 @@
                         <li><a href="#" class="active">Mis indicadores</a></li>
                     </ul>
                 </div>
+                <nav class="drawer-nav" role="navigation">
+                    <div>
+                        <div class="fluid-list cnt-menu-user">
+                            <div class="user-nav">
+                                <span class="center"><i class="fa fa-user" aria-hidden="true"></i></span>
+                                <div class="user-list navbar-right">
+                                    <span>Bienvenid@</span>
+                                    <h4>Guiliana Burga</h4>
+                                </div>
+                            </div>
+                            <div class="jr-d">
+                                <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+                                <div class="sector-n">
+                                    <span>Sector:</span>
+                                    <p>Nombre del Sector:</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fluid-list cnt-list-menu-d">
+                            <ul class="reset-ul">
+                                <li>
+                                    <a href="#">Inicio</a>
+                                </li>
+                                <li>
+                                    <a href="#">Mi perfil</a>
+                                </li>
+                                <li>
+                                    <a href="#">Mis revistas</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="active">Mis indicadores</a>
+                                </li>
+                                <li>
+                                    <a href="#">Cerrar sesión</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
             </header>
             <div class="fluid-list cnt-container">
                 <div class="fluid-list bread-n">
@@ -68,7 +111,7 @@
                 <div class="fluid-list cnt-table-filter">
                     <h2>Mis Indicadores</h2>
                     <div class="fluid-list filter-b" id="filterS">
-                        <ul class="reset-ul">
+                        <!--<ul class="reset-ul">
                             <li>Filtrar por:</li>
                             <li>
                                 <select id="fCodigo" class="form-control" multiple="multiple">
@@ -91,7 +134,98 @@
                             <li>
                                 <button class="btn btn-search">Buscar</button>
                             </li>
-                        </ul>
+                        </ul>-->
+                    </div>
+                    <div class="fluid-list filter-mobile">
+                        <div class="btnFilter">
+                            <i class="fa fa-filter" aria-hidden="true"></i>
+                                Filtros
+                        </div>
+                        <div class="cntFilter">
+                            <ul class="reset-ul">
+                                <li>
+                                    <select id="fCodigo" class="form-control" multiple="multiple">
+                                        <option value="1">345678</option>
+                                        <option value="2">456783</option>
+                                        <option value="3">564321</option>
+                                        <option value="4">676543</option>
+                                        <option value="5">789877</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    <select id="cCNO" class="form-control" multiple="multiple">
+                                        <option value="1">cno 1</option>
+                                        <option value="2">cno 1</option>
+                                        <option value="3">cno 1</option>
+                                        <option value="4">cno 1</option>
+                                        <option value="5">cno 1</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    <button class="btn btn-search">Buscar</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="fluid-list filter-mobile">
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                <i class="fa fa-filter" aria-hidden="true"></i>
+                                Filtros
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li>
+                                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                      <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingOne">
+                                          <h4 class="panel-title">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                              Collapsible Group Item #1
+                                            </a>
+                                          </h4>
+                                        </div>
+                                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                          <div class="panel-body">
+                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingTwo">
+                                          <h4 class="panel-title">
+                                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                              Collapsible Group Item #2
+                                            </a>
+                                          </h4>
+                                        </div>
+                                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                          <div class="panel-body">
+                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingThree">
+                                          <h4 class="panel-title">
+                                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                              Collapsible Group Item #3
+                                            </a>
+                                          </h4>
+                                        </div>
+                                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                          <div class="panel-body">
+                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="fluid-list cnt-graficas-n">
                         <p>Graficas</p>
@@ -143,6 +277,8 @@
     </div>
     <script src="../js/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/iscroll.js"></script>
+    <script src="../js/drawer.min.js"></script>
     <script src="../js/bootstrap-multiselect.js"></script>
     <script src="../js/jquery.magnific-popup.min.js"></script>
     <script src="../js/main.js"></script>

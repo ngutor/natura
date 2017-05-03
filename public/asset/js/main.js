@@ -20,6 +20,7 @@ var obj = {
         }
         /**/
         obj.menuMovil();
+        obj.filterActiveMenu();
 	},
 	filterSearch: function(){
 		$('#fCodigo').multiselect({
@@ -174,6 +175,20 @@ var obj = {
             ]
         });*/
         
+    },
+    filterActiveMenu: function(){
+        var eventActive = false;
+        $(".btnFilter").click(function(){
+            if(eventActive === true){
+                $(this).removeClass("btnActive");
+                $(".cntFilter").hide();
+                eventActive = false;
+            }else{
+                $(this).addClass("btnActive");
+                $(".cntFilter").show();
+                eventActive = true;
+            }
+        });
     }
 };
 (function() {

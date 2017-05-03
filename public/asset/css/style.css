@@ -167,7 +167,7 @@ body{font-family: 'Open Sans', sans-serif;font-size: 14px;background: #ebebeb;}
 .cnt-table-reclamos .adCconsulta{width: 120px;}
 .cnt-m-reclamos{margin-bottom: 25px;}
 .cnt-m-reclamos>ul>li{float: left;margin-right: 8px;}
-.cnt-m-reclamos>ul>li>a{line-height: 48px;padding: 0 18px;font-size: 14px;color: #fff;font-weight: 700;display: block;border-radius: 8px;}
+.cnt-m-reclamos>ul>li>a{padding: 14px 18px;font-size: 14px;color: #fff;font-weight: 700;display: block;border-radius: 8px;}
 .cnt-m-reclamos>ul>li>a i{margin-right: 10px;font-size: 22px;vertical-align: middle;}
 .sReclamos{background: #4f9fb9;}
 .dReclamos{background: #d2232a;}
@@ -201,6 +201,22 @@ body{font-family: 'Open Sans', sans-serif;font-size: 14px;background: #ebebeb;}
 .drawer-nav .user-nav>span>i{font-size: 55px;margin-top: 17px;}
 .cnt-list-menu-d ul li a{padding: 15px 20px;display: block;color: #fff;font-size: 22px;font-weight: 700;}
 .cnt-list-menu-d ul li a.active, .cnt-list-menu-d ul li a:hover, .cnt-list-menu-d ul li a:focus, .cnt-list-menu-d ul li a:active{background: #fff;color: #f2821b;}
+.drawer-nav .user-list h5{font-weight: 700;font-size: 18px;color: #fff;font-style: italic;}
+.cnt-list-menu-d ul li ul{background: #f2a900;}
+.cnt-list-menu-d ul li ul li a{font-size: 18px;}
+/*Filter mobile*/
+.filter-mobile{margin-bottom: 18px;position: relative;}
+.btnFilter{width: 100%;padding: 0 2px;height: 50px;border-radius: 0;background: #f2821b;font-weight: 700;font-size: 22px;color: #fff;border:0;line-height: 50px;text-align: center;}
+.cntFilter{width: 100%;height: auto;display: none;-webkit-box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.3);-moz-box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.3);box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.3);border: 1px solid #e5e5e5!important;}
+.cntFilter .btn-group{width: 100%!important;}
+.cntFilter .dropdown-toggle{padding: 0 12px;text-align: left;height: 50px;width: 100%;border-radius: 0;box-shadow: 0 0 0;border:0!important;color: #666;font-size: 16px;}
+.cntFilter>ul>li{border-top:3px solid #b2b2b2;}
+.cntFilter>ul>li:last-child{padding: 15px 35px;}
+.cntFilter .btn-search{height: 40px;line-height: 40px;width: 100%;font-size: 20px;}
+.cntFilter .dropdown-toggle .caret{position: absolute;right: 12px;top: 18px;border-top: 16px dashed;border-top: 16px solid\9;border-right: 12px solid transparent;border-left: 12px solid transparent;}
+.filter-mobile>.dropdown>.dropdown-toggle:focus, .filter-mobile>.dropdown>.dropdown-toggle:active, .filter-mobile>.dropdown>.dropdown-toggle:hover{border:0;}
+.filter-mobile>.open>.dropdown-toggle{border: 1px solid #e5e5e5!important;background: #fff!important;color: #f2821b!important;-webkit-box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.3);-moz-box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.3);box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.3);}
+.filter-mobile>.dropdown>.dropdown-menu{width: 100%;border-radius: 0;-webkit-box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.3);-moz-box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.3);box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.3);border: 1px solid #e5e5e5!important;}
 @media (min-width: 768px){
 	.modal-dialog{width: 640px;}
 	.modal-custom-alert .modal-dialog{width: 400px;}
@@ -215,15 +231,21 @@ body{font-family: 'Open Sans', sans-serif;font-size: 14px;background: #ebebeb;}
       width: 980px;
   }
   .drawer-hamburger{display: none;}
+  .filter-mobile{display: none;}
 }
 @media (max-width: 992px){
   .user-nav{display: none;}
   .nav-header{display: none;}
   .jr-d{display: none;}
   .custom-space{padding-left: 15px;}
+  .cnt-indicadores ul li{margin-right: 2%;width: 48%;}
+  .list-indicador{width: 100%;}
+  .cnt-m-reclamos>ul>li{width: 32.3333333%;margin-right: 1%;}
 }
 @media (max-width: 768px){
   .list-indicador{width: 100%;}
+  .cnt-m-reclamos ul li a{text-align: center;}
+  .cnt-m-reclamos ul li i{display: none;}
 }
 @media (max-width: 688px){
   .info-t ul{width: 100%;}
@@ -232,6 +254,7 @@ body{font-family: 'Open Sans', sans-serif;font-size: 14px;background: #ebebeb;}
   .info-t ul li{width: 100%;}
 }
 @media (max-width: 480px){
+  .cnt-m-reclamos>ul>li>a{padding: 14px 5px;}
   .cnt-table-filter h2 span{display: none;}
   .b-list-pag>.right{float: inherit;text-align: center;margin-bottom: 10px;}
   .b-list-pag>.left{float: inherit;text-align: center;}

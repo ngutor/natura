@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap-multiselect.css">
     <link rel="stylesheet" href="../css/magnific-popup.css">
+    <link rel="stylesheet" type="text/css" href="../css/drawer.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -20,7 +21,7 @@
     <![endif]-->
 </head>
 
-<body>
+<body class="drawer drawer--right">
     <div id="main">
         <div class="container">
             <header class="header fluid-list">
@@ -41,6 +42,10 @@
 							</div>
 						</div>
         			</div>
+                    <button type="button" class="drawer-toggle drawer-hamburger">
+                        <span class="sr-only">toggle navigation</span>
+                        <span class="drawer-hamburger-icon"></span>
+                    </button>
         		</div>
         		<div class="fluid-list nav-header">
         			<ul class="reset-ul">
@@ -54,6 +59,40 @@
 					    </li>
         			</ul>
         		</div>
+                <nav class="drawer-nav" role="navigation">
+                    <div>
+                        <div class="fluid-list cnt-menu-user">
+                            <div class="user-nav">
+                                <span class="center"><i class="fa fa-user" aria-hidden="true"></i></span>
+                                <div class="user-list navbar-right">
+                                    <span>Bienvenid@</span>
+                                    <h4>Guiliana Burga</h4>
+                                    <h5>Nombre Gerencia</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fluid-list cnt-list-menu-d">
+                            <ul class="reset-ul">
+                                <li>
+                                    <a href="#">Inicio</a>
+                                </li>
+                                <li>
+                                    <a href="#">Mi perfil</a>
+                                </li>
+                                <li>
+                                    <a href="#">Mis indicadores</a>
+                                    <ul class="reset-ul">
+                                        <li><a href="#" class="active">Efectividad de entrega</a></li>
+                                        <li><a href="#">Gestión de reclamos</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">Cerrar sesión</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
         	</header>
             <div class="fluid-list cnt-container">
                 <div class="fluid-list bread-n">
@@ -165,6 +204,8 @@
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/bootstrap-multiselect.js"></script>
     <script src="../js/jquery.magnific-popup.min.js"></script>
+    <script src="../js/iscroll.js"></script>
+    <script src="../js/drawer.min.js"></script>
     <script src="../js/main.js"></script>
 </body>
 
