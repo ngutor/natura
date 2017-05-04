@@ -153,7 +153,9 @@ var obj = {
         });
     },
     menuMovil: function(){
-        $('.drawer').drawer();
+        if($('.drawer').length>0){
+            $('.drawer').drawer();
+        }
     },
     nDonut: function(){
         console.log("hik");
