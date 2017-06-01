@@ -4,7 +4,7 @@
     <title>Index - GV</title>
     @include("common.head")
 </head>
-<body>
+<body class="drawer drawer--right">
     <div id="main">
         <div class="container">
             @include($user->tp_cliente . '.header')
@@ -44,13 +44,60 @@
         			</ul>
         		</div>
         		<div class="fluid-list r-digital">
-        			<img src="{{ asset('asset/img/r-digital.jpg') }}">
+                @if(strcmp($user->tp_cliente,"admin") == 0)
+                    <input type="button" id="bt-cambia-img" value="Cambiar" />
+                    <style type="text/css">
+                        #bt-cambia-img{position:absolute;margin-top:5px;margin-left:5px;}
+                    </style>
+        			<!--Modal de Observaciones-->
+                    <div class="modal fade modal-custom-n" id="tModalBanner" tabindex="-1" role="dialog" aria-labelledby="tModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <form class="form-horizontal m-form-n" action="{{ url('ajax/upd_banner') }}" method="post" enctype="multipart/form-data">
+                                        <input type="hidden" name="_token" value="{{ csrf_token() }}" />
+                                        <h2>Cambiar banner</h2>
+                                        <div class="form-group">
+                                            <div class="col-xs-12">
+                                                <div class="row">
+                                                    <p><b>ATENCION: </b>Una vez que cambie el banner, el anterior será borrado.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-sm-12">
+                                                <div class="row">
+                                                    <label for="tRecla" class="col-sm-2 control-label">Archivo:</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="file" class="form-control" name="banner" />
+                                                    </div>
+                                                </div>
+                                                <div class="row"><br/></div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-sm-offset-2 col-sm-10">
+                                                <button type="submit" class="btn btn-mC btn-grabar" id="btn-grabar">GRABAR</button>
+                                                <button type="button" class="btn btn-mC btn-cancelar" data-dismiss="modal">CANCELAR</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End-->
+                @endif
+                    <img src="{{ asset('asset/img/r-digital.jpg') }}?t={{ rand() }}">
         		</div>
         	</div>
         </div>
     </div>
-    <script src="{{ asset('asset/js/jquery.min.js') }}"></script>
-    <script src="{{ asset('asset/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('asset/js/main.js?v1') }}"></script>
+    @include("common.scripts")
+    <script type="text/javascript">
+        $("#bt-cambia-img").on("click", function() {
+            $("#tModalBanner").modal("show");
+        });
+    </script>
 </body>
 </html>

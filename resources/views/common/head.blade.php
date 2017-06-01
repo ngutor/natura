@@ -4,9 +4,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,700i" rel="stylesheet">
-    <link href="{{ asset('asset/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('asset/css/bootstrap.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('asset/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('asset/css/drawer.min.css') }}">
     <link rel="stylesheet" href="{{ asset('asset/css/style.css') }}">
+
+    <link rel="stylesheet" type="text/css" href="{{ asset('asset/css/bootstrap-multiselect.css') }}">
+    <link rel="stylesheet" href="{{ asset('asset/css/magnific-popup.css?v1') }}">
+    <link rel="stylesheet" href="{{ asset('asset/css/style.css?v1') }}">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>

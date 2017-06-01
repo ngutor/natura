@@ -27,25 +27,26 @@
                 <img src="{{ asset('asset/img/logo-natura.png') }}">
             </div>
             <div class="fluid-list cnt-form-l">
-                <form id="form-login">
+                <form id="form-login" action="{{ url('login') }}" method="post">
                     <div class="form-group one-form">
                         <div class="input-group">
                             <span class="input-group-addon addon-n"><i class="fa fa-user" aria-hidden="true"></i></span>
-                            <input type="text" class="form-control disabled" id="name" placeholder="Nombre de Usuario">
+                            <input type="text" class="form-control disabled" id="name" name="usr" placeholder="Nombre de Usuario">
                         </div>
                     </div>
                     <div class="form-group two-form">
                         <div class="input-group">
                             <span class="input-group-addon addon-n"><i class="fa fa-unlock-alt" aria-hidden="true"></i></span>
-                            <input type="password" class="form-control disabled" id="pass" placeholder="Contraseña">
+                            <input type="password" class="form-control disabled" id="pass" name="psw" placeholder="Contraseña">
                         </div>
                     </div>
-                    <input type="hidden" id="token" value="{{ csrf_token() }}" />
+                    <!--input type="hidden" id="token" value="{{ csrf_token() }}" /-->
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}" />
                     <button id="btn-login" type="submit" class="btn btn-login">Entrar</button>
                 </form>
             </div>
             <div class="fluid-list center">
-                <a href="#" class="link-a">Recuperar contraseña</a>
+                <a href="{{ url('recupera') }}" class="link-a">Recuperar contraseña</a>
             </div>
         </div>
     </div>
@@ -83,8 +84,12 @@
         function formLoginOnSubmit(event) {
             event.preventDefault();
             $("#btn-login").attr("disabled", true);
-            var p = {usr:document.getElementById("name").value,psw:document.getElementById("pass").value,_token:document.getElementById("token").value};
-            if(p.usr != "" && p.psw != "") $.post("{{ url('ajax/login') }}", p, postLogin, "json");
+            //var p = {usr:document.getElementById("name").value,psw:document.getElementById("pass").value,_token:document.getElementById("token").value};
+            var p = {usr:document.getElementById("name").value,psw:document.getElementById("pass").value};
+            if(p.usr != "" && p.psw != "") {
+                //$.post("{{ url('ajax/login') }}", p, postLogin, "json");
+                document.getElementById("form-login").submit();
+            }
             else {
                 document.getElementById("modal-msg").innerHTML = "Los campos 'Nombre de Usuario' y 'Contraseña' son obligatorios.";
                 $("#modal-div").modal("show");
@@ -93,5 +98,11 @@
         }
         $("#form-login").on("submit", formLoginOnSubmit);
     </script>
+    @if(isset($err))
+    <script type="text/javascript">
+        document.getElementById("modal-msg").innerHTML = "{{ $err }}";
+        $("#modal-div").modal("show");
+    </script>
+    @endif
 </body>
 </html>
