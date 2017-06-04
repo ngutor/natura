@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Admin - Mis indicadores</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="http://201.131.220.18/natura/asset/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="http://201.131.220.18/natura/asset/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="http://201.131.220.18/natura/asset/css/drawer.min.css">
+    <link rel="stylesheet" type="text/css" href="http://201.131.220.18/natura/asset/css/bootstrap-multiselect.css">
+    <link rel="stylesheet" href="http://201.131.220.18/natura/asset/css/magnific-popup.css?v1">
+    <link rel="stylesheet" href="../asset/css/style.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+    #chart-div {
+        display: none;
+    }
+    </style>
+</head>
+<body class="drawer drawer--right">
+    <div id="main">
+        <div class="container">
+            <header class="header fluid-list">
+                <div class="fluid-list top-header">
+                    <div class="left logo-header">
+                        <a href="http://natura.com.pe" target="_blank"><img src="http://201.131.220.18/natura/asset/img/logo-natura.png"></a>
+                    </div>
+                    <div class="right user-nav">
+                        <span class="center"><i class="fa fa-user" aria-hidden="true"></i></span>
+                        <div class="user-list navbar-right">
+                            <span>Bienvenid@</span>
+                            <div class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Beatriz Blas Chavez<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="http://201.131.220.18/natura/perfil">Mi perfil</a></li>
+                                    <li><a href="http://201.131.220.18/natura/logout">Cerrar Sesión</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="drawer-toggle drawer-hamburger">
+                        <span class="sr-only">toggle navigation</span>
+                        <span class="drawer-hamburger-icon"></span>
+                    </button>
+                </div>
+                <div class="fluid-list nav-header">
+                    <ul class="reset-ul">
+                        <li><a href="http://201.131.220.18/natura" class="">Inicio</a></li>
+                        <li><a href="http://201.131.220.18/natura/revistas" class="">Mis revistas</a></li>
+                        <li><a href="http://201.131.220.18/natura/auditoria" class="">Auditoría</a></li>
+                        <li><a href="http://201.131.220.18/natura/reclamos" class="">Reclamos</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle active" data-toggle="dropdown">Mis indicadores</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="http://201.131.220.18/natura/indicadores/entrega">Efectividad de entrega</a></li>
+                                <li><a href="http://201.131.220.18/natura/indicadores/reclamos">Gestión de reclamos</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="http://201.131.220.18/natura/usuarios" class="">Administración de Usuarios</a></li>
+                    </ul>
+                </div>
+                <nav class="drawer-nav" role="navigation">
+                    <div>
+                        <div class="fluid-list cnt-menu-user">
+                            <div class="user-nav">
+                                <span class="center"><i class="fa fa-user" aria-hidden="true"></i></span>
+                                <div class="user-list navbar-right">
+                                    <span>Bienvenid@</span>
+                                    <h4>Beatriz Blas Chavez</h4>
+                                </div>
+                            </div>
+                            <div class="jr-d">
+                                <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+                                <div class="sector-n">
+                                    <span>Sector: MINERVA</span>
+                                    <p>Nombre del Sector: VENUS</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fluid-list cnt-list-menu-d">
+                            <ul class="reset-ul">
+                                <li>
+                                    <a href="http://201.131.220.18/natura" class="">Inicio</a>
+                                </li>
+                                <li>
+                                    <a href="http://201.131.220.18/natura/perfil">Mi perfil</a>
+                                </li>
+                                <li>
+                                    <a href="http://201.131.220.18/natura/revistas" class="">Mis revistas</a>
+                                </li>
+                                <li>
+                                    <a href="http://201.131.220.18/natura/auditoria" class="">Auditoría</a>
+                                </li>
+                                <li>
+                                    <a href="http://201.131.220.18/natura/reclamos" class="">Reclamos</a>
+                                </li>
+                                <li>
+                                    <a href="#">Mis indicadores</a>
+                                    <ul class="reset-ul">
+                                        <li><a href="http://201.131.220.18/natura/indicadores/entrega">Efectividad de entrega</a></li>
+                                        <li><a href="http://201.131.220.18/natura/indicadores/reclamos">Gestión de reclamos</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="http://201.131.220.18/natura/usuarios" class="">Administración de Usuarios</a>
+                                </li>
+                                <li>
+                                    <a href="http://201.131.220.18/natura/logout">Cerrar sesión</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <div class="fluid-list cnt-container">
+                <div class="fluid-list bread-n">
+                    <ul class="reset-ul">
+                        <li>
+                            <a href="http://201.131.220.18/natura">&lt; Volver</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="fluid-list cnt-table-filter">
+                    <h2>Indicadores de Reclamos - Gestión de Reclamos</h2>
+                    <div class="fluid-list filter-b" id="filterS">
+                        <ul class="reset-ul">
+                            <li>Filtrar por:</li>
+                            <li>
+                                <select id="adCiclo" class="form-control" multiple="multiple">
+                                    <option value="201707">Ciclo 201707</option>
+                                </select>
+                            </li>
+                            <li>
+                                <select id="adGerencia" class="form-control" multiple="multiple">
+                                    <option value="MINERVA">Gerencia MINERVA</option>
+                                </select>
+                            </li>
+                            <li>
+                                <select id="adSector" class="form-control" multiple="multiple">
+                                    <option value="PLATINO">Sector PLATINO</option>
+                                    <option value="CABALLITO DE MAR">Sector CABALLITO DE MAR</option>
+                                    <option value="COSTA DEL SOL">Sector COSTA DEL SOL</option>
+                                    <option value="CARTAGENA">Sector CARTAGENA</option>
+                                    <option value="LIBRA">Sector LIBRA</option>
+                                    <option value="DEMETER">Sector DEMETER</option>
+                                </select>
+                            </li>
+                            <li>
+                                <select id="adCNO" class="form-control" multiple="multiple">
+                                    <option value="2353">2353</option>
+                                    <option value="2999">2999</option>
+                                    <option value="1784">1784</option>
+                                    <option value="2691">2691</option>
+                                    <option value="2240" >2240</option>
+                                    <option value="3149" >3149</option>
+                                    <option value="314" >314</option>
+                                    <option value="2106" >2106</option>
+                                    <option value="355" >355</option>
+                                    <option value="499" >499</option>
+                                    <option value="471" >471</option>
+                                    <option value="550" >550</option>
+                                    <option value="2416" >2416</option>
+                                    <option value="1873" >1873</option>
+                                    <option value="500" >500</option>
+                                    <option value="1951" >1951</option>
+                                    <option value="1221" >1221</option>
+                                    <option value="2542" >2542</option>
+                                    <option value="1220" >1220</option>
+                                    <option value="2480" >2480</option>
+                                    <option value="3077" >3077</option>
+                                    <option value="1931" >1931</option>
+                                    <option value="2845" >2845</option>
+                                    <option value="995" >995</option>
+                                    <option value="2692" >2692</option>
+                                    <option value="552" >552</option>
+                                    <option value="2704" >2704</option>
+                                    <option value="939" >939</option>
+                                    <option value="2640" >2640</option>
+                                    <option value="2149" >2149</option>
+                                    <option value="2804" >2804</option>
+                                    <option value="2434" >2434</option>
+                                    <option value="2515" >2515</option>
+                                    <option value="2988" >2988</option>
+                                    <option value="2956" >2956</option>
+                                    <option value="940" >940</option>
+                                    <option value="1981" >1981</option>
+                                    <option value="2862" >2862</option>
+                                    <option value="2930" >2930</option>
+                                    <option value="2844" >2844</option>
+                                    <option value="3178" >3178</option>
+                                    <option value="3016" >3016</option>
+                                </select>
+                            </li>
+                            <li>
+                                <select id="adEstInicial" class="form-control" multiple="multiple">
+                                    <option value="PENDIENTE" >PENDIENTE</option>
+                                    <option value="VERIFICACION" >VERIFICACION</option>
+                                    <option value="RESUELTO" >RESUELTO</option>
+                                </select>
+                            </li>
+                            <li>
+                                <select id="adEstFinal" class="form-control" multiple="multiple">
+                                    <option value="PENDIENTE" >PENDIENTE</option>
+                                    <option value="EN PROCESO" >EN PROCESO</option>
+                                    <option value="PROCEDE" >PROCEDE</option>
+                                    <option value="NO PROCEDE" >NO PROCEDE</option>
+                                </select>
+                            </li>
+                            <li>
+                                <button id="btn-busca" class="btn btn-search">Buscar</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="chart-div" class="fluid-list cnt-graficas-n">
+                        <div class="row">
+                            <!-- GRÁFICO 1 -->
+                            <div class="col-xs-6 col-md-7">
+                                <div id="chart-container-1"></div>
+                            </div>
+                            <div class="col-xs-5 col-md-4">
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <form class="form-horizontal">
+                                    <div class="form-group">
+                                        <label for="adFecha1" class="col-sm-4 control-label">Fecha(s)</label>
+                                        <div class="col-sm-8">
+                                            <select id="adFecha1" class="form-control adFecha" multiple="multiple"></select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-8 col-sm-offset-4">
+                                            <input type="button" id="btRefreshCh1" class="btn btn-danger" value="Refrescar" />
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!-- GRÁFICO 2 -->
+                            <div class="col-xs-6 col-md-7">
+                                <div id="chart-container-2"></div>
+                            </div>
+                            <div class="col-xs-5 col-md-4">
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <form class="form-horizontal">
+                                    <div class="form-group">
+                                        <label for="adFecha2" class="col-sm-4 control-label">Fecha(s)</label>
+                                        <div class="col-sm-8">
+                                            <select id="adFecha2" class="form-control adFecha" multiple="multiple"></select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-8 col-sm-offset-4">
+                                            <input type="button" id="btRefreshCh2" class="btn btn-danger" value="Refrescar" />
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!-- GRÁFICO 3 -->
+                            <div class="col-xs-6 col-md-7">
+                                <div id="chart-container-3"></div>
+                            </div>
+                            <div class="col-xs-5 col-md-4">
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <form class="form-horizontal">
+                                    <div class="form-group">
+                                        <label for="adFecha3" class="col-sm-4 control-label">Fecha(s)</label>
+                                        <div class="col-sm-8">
+                                            <select id="adFecha3" class="form-control adFecha" multiple="multiple"></select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-8 col-sm-offset-4">
+                                            <input type="button" id="btRefreshCh3" class="btn btn-danger" value="Refrescar" />
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fluid-list cnt-table-f">
+                        <div class="fluid-list b-list-pag">
+                            <div class="left">
+                                <ul class="reset-ul">
+                                    <li><a href="#" class="e-excel"><span></span> Exportar a Excel</a></li>
+                                    <li><a href="#" class="e-mail" data-toggle="modal" data-target="#tModalE"><span></span> Enviar a mail</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--Modal de email-->
+                        <div class="modal fade modal-custom-n" id="tModalE" tabindex="-1" role="dialog" aria-labelledby="tModalLabel">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        <form class="form-horizontal m-form-n" action="">
+                                            <h2>Enviar listado por mail</h2>
+                                            <div class="form-group">
+                                                <label for="email" class="col-sm-2 control-label">Enviar a :</label>
+                                                <div class="col-sm-10">
+                                                    <input type="email" name="email" class="form-control" id="titulo">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="msn" class="col-sm-2 control-label">Mensaje:</label>
+                                                <div class="col-sm-10">
+                                                    <textarea name="msn" class="form-control" rows="5"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-sm-offset-2 col-sm-10">
+                                                    <button type="submit" class="btn btn-mC btn-grabar">ENVIAR</button>
+                                                    <button type="button" class="btn btn-mC btn-cancelar" data-dismiss="modal">CANCELAR</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -->
+    <div class="modal fade" id="modal-error" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Operación fallida</h4>
+                </div>
+                <div class="modal-body">
+                    <p id="modal-error-msg"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="http://201.131.220.18/natura/asset/js/jquery.min.js"></script>
+    <script src="http://201.131.220.18/natura/asset/js/bootstrap.min.js"></script>
+    <script src="http://201.131.220.18/natura/asset/js/bootstrap-multiselect.js"></script>
+    <script src="http://201.131.220.18/natura/asset/js/jquery.magnific-popup.min.js"></script>
+    <script src="http://201.131.220.18/natura/asset/js/iscroll.js"></script>
+    <script src="http://201.131.220.18/natura/asset/js/drawer.min.js"></script>
+    <script src="../asset/js/main.js"></script>
+    <script src="http://201.131.220.18/natura/asset/js/highcharts.js"></script>
+    <script src="http://201.131.220.18/natura/asset/js/highcharts-3d.js"></script>
+    <script type="text/javascript">
+    var dataset, arr_fechas, numberOfItems, arr_estados;
+
+    function get_index(v_array, v_key) {
+        var indexOf = -1;
+        var size = v_array.length;
+        for (var i = 0; i < size; i++) {
+            var v_array_i = v_array[i];
+            if (v_array_i[0] == v_key) indexOf = i;
+        }
+        return indexOf;
+    }
+
+    function get_index_arr(v_array, v_key) {
+        var indexOf = -1;
+        var size = v_array.length;
+        for (var i = 0; i < size; i++) {
+            var v_array_i = v_array[i];
+            if (v_array_i == v_key) indexOf = i;
+        }
+        return indexOf;
+    }
+
+    function get_index_obj(v_array, v_key) {
+        var indexOf = -1;
+        var size = v_array.length;
+        for (var i = 0; i < size; i++) {
+            var v_array_i = v_array[i];
+            if (v_array_i.name == v_key) indexOf = i;
+        }
+        return indexOf;
+    }
+
+    function set_combos_fechas() {
+        arr_fechas = [];
+        numberOfItems = dataset.length;
+        for (var i = 0; i < numberOfItems; i++) {
+            var dato = dataset[i];
+            var ifecha = arr_fechas.indexOf(dato.fechavisita);
+            if (ifecha == -1) arr_fechas.push(dato.fechavisita);
+        }
+        var nFechas = arr_fechas.length;
+        $("#adFecha1").multiselect("destroy");
+        $("#adFecha2").multiselect("destroy");
+        $("#adFecha3").multiselect("destroy");
+        $("#adFecha1").empty();
+        $("#adFecha2").empty();
+        $("#adFecha3").empty();
+        for (var j = 0; j < nFechas; j++) {
+            if (arr_fechas[j] != "") {
+                $("#adFecha1").append(
+                    $("<option/>").val(arr_fechas[j]).attr("selected", true).html(arr_fechas[j])
+                );
+                $("#adFecha2").append(
+                    $("<option/>").val(arr_fechas[j]).attr("selected", true).html(arr_fechas[j])
+                );
+                $("#adFecha3").append(
+                    $("<option/>").val(arr_fechas[j]).attr("selected", true).html(arr_fechas[j])
+                );
+            }
+        }
+        $(".adFecha").multiselect({
+            includeSelectAllOption: true,
+            selectAllName: 'select-all-name'
+        });
+    }
+
+    function draw_chart_1() {
+        var sel_fechas = $("#adFecha1").val();
+        var arr_data = [];
+        for (var i = 0; i < numberOfItems; i++) {
+            var dato = dataset[i];
+            if (sel_fechas.indexOf(dato.fechavisita) > -1) {
+                var indice = get_index(arr_data, dato.estado);
+                if (indice > -1) { //existe
+                    arr_data[indice][1] = arr_data[indice][1] + parseInt(dato.cant);
+                } else {
+                    arr_data.push([dato.estado, parseInt(dato.cant)]);
+                }
+            }
+        }
+        arr_fechas.sort();
+        $("#chart-container-1").height(480).highcharts({
+            chart: {
+                type: 'pie',
+                options3d: {
+                    enabled: true,
+                    alpha: 45
+                }
+            },
+            title: {
+                text: 'Efectividad de entrega'
+            },
+            plotOptions: {
+                pie: {
+                    innerSize: 100,
+                    depth: 45
+                }
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'top',
+                x: -40,
+                y: 100,
+                floating: true,
+                borderWidth: 1,
+                backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+                shadow: true
+            },
+            series: [{
+                name: 'Cantidad',
+                data: arr_data
+            }]
+        });
+    }
+
+    function draw_chart_2() {
+        var arr_series = [];
+        arr_estados = [];
+        var sel_fechas = $("#adFecha2").val();
+        //1. prepara array con estados
+        for (var i = 0; i < numberOfItems; i++) {
+            var dato = dataset[i];
+            var iestado = get_index_arr(arr_estados, dato.estado);
+            if (iestado == -1) arr_estados.push(dato.estado);
+        }
+        //2. prepara estructura de la data
+        var nEstados = arr_estados.length;
+        for (var j = 0; j < nEstados; j++) {
+            var data = [];
+            var numberOfDates = arr_fechas.length;
+            for (var k = 0; k < numberOfDates; k++) {
+                data[k] = 0;
+            }
+            arr_series.push({
+                name: arr_estados[j],
+                data: data
+            });
+        }
+        //3. ingresa los datos
+        for (var i = 0; i < numberOfItems; i++) {
+            var dato = dataset[i];
+            if (sel_fechas.indexOf(dato.fechavisita) > -1) {
+                var iest = get_index_obj(arr_series, dato.estado);
+                if (iest > -1) {
+                    var idata = arr_series[iest].data;
+                    var ifecha = arr_fechas.indexOf(dato.fechavisita);
+                    if (ifecha > -1) {
+                        arr_series[iest].data[ifecha] = arr_series[iest].data[ifecha] + parseInt(dato.cant);
+                    }
+                }
+            }
+        }
+        //4. dibuja grafico
+        $('#chart-container-2').highcharts({
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'Entregas por fecha'
+            },
+            subtitle: {
+                text: 'Source: WorldClimate.com'
+            },
+            xAxis: {
+                categories: arr_fechas
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: 'Cantidad'
+                }
+            },
+            tooltip: {
+                headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                    '<td style="padding:0"><b>{point.y} unids</b></td></tr>',
+                footerFormat: '</table>',
+                shared: true,
+                useHTML: true
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.2,
+                    borderWidth: 0
+                }
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'top',
+                x: -40,
+                y: 100,
+                floating: true,
+                borderWidth: 1,
+                backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+                shadow: true
+            },
+            series: arr_series
+        });
+    }
+
+    function draw_chart_3() {
+        var arr_series = [];
+        var sel_fechas = $("#adFecha3").val();
+        //1. prepara array con sectores
+        var arr_sectores = [];
+        for (var i = 0; i < numberOfItems; i++) {
+            var dato = dataset[i];
+            var isector = get_index_arr(arr_sectores, dato.sector);
+            if (isector == -1) arr_sectores.push(dato.sector);
+        }
+        //2. prepara estructura de la data
+        var nEstados = arr_estados.length;
+        for (var j = 0; j < nEstados; j++) {
+            var data = [];
+            var numberOfSectors = arr_sectores.length;
+            for (var k = 0; k < numberOfSectors; k++) data[k] = 0;
+            arr_series.push({
+                name: arr_estados[j],
+                data: data
+            });
+        }
+        //3. ingresa los datos
+        for (var i = 0; i < numberOfItems; i++) {
+            var dato = dataset[i];
+            if (sel_fechas.indexOf(dato.fechavisita) > -1) {
+                var iest = get_index_obj(arr_series, dato.estado);
+                if (iest > -1) {
+                    var idata = arr_series[iest].data;
+                    var isector = arr_sectores.indexOf(dato.sector);
+                    if (isector > -1) {
+                        arr_series[iest].data[isector] = arr_series[iest].data[isector] + parseInt(dato.cant);
+                    }
+                }
+            }
+        }
+        //4. dibuja grafico
+        $('#chart-container-3').highcharts({
+            chart: {
+                type: 'bar'
+            },
+            title: {
+                text: 'Entregas por sector'
+            },
+            subtitle: {
+                text: 'Mostrando gráfico'
+            },
+            xAxis: {
+                categories: arr_sectores,
+                title: {
+                    text: null
+                }
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: 'Cantidad (unidades)',
+                    align: 'high'
+                },
+                labels: {
+                    overflow: 'justify'
+                }
+            },
+            tooltip: {
+                valueSuffix: ' unids.'
+            },
+            plotOptions: {
+                bar: {
+                    dataLabels: {
+                        enabled: true
+                    }
+                }
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'top',
+                x: -40,
+                y: 100,
+                floating: true,
+                borderWidth: 1,
+                backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+                shadow: true
+            },
+            credits: {
+                enabled: false
+            },
+            series: arr_series
+        });
+    }
+
+    function btnBuscaOnClick(event) {
+        event.preventDefault();
+        $("#chart-container-1").empty();
+        $("#chart-container-2").empty();
+        $("#chart-container-3").empty();
+        var p = {
+            ccl: $("#adCiclo").val(),
+            grn: $("#adGerencia").val(),
+            str: $("#adSector").val(),
+            cno: $("#adCNO").val(),
+            ein: $("#adEstInicial").val(),
+            efn: $("#adEstFinal").val(),
+            _token: "HG9TNEjuVCM4Cq5jT965sLqjg2KBiNWmp8h4NFk0"
+        };
+        $.post("http://201.131.220.18/natura/ajax/indicadores/gestion", p, function(response) {
+            if (response.success) {
+                dataset = response.data;
+                console.log(dataset);
+                set_combos_fechas();
+                draw_chart_1();
+                draw_chart_2();
+                draw_chart_3();
+                $("#chart-div").fadeIn(150);
+            } else {
+                document.getElementById("modal-error-msg").innerHTML = response.message;
+                $("#modal-error").modal("show");
+            }
+        }, "json");
+    }
+
+    function populate_combo(idCombo, data) {
+        var combo = $(idCombo);
+        combo.empty();
+        for (var i in data) {
+            var idata = data[i];
+            combo.append(
+                $("<option/>").attr("selected", "selected").val(idata.value).html(idata.value)
+            );
+        }
+        $(idCombo).multiselect("rebuild");
+    }
+
+    function adEstInicialOnChange() {
+        $("input[type=checkbox]").attr("disabled", "disabled");
+        var p = {
+            _token: "HG9TNEjuVCM4Cq5jT965sLqjg2KBiNWmp8h4NFk0",
+            ein: $("#adEstInicial").val()
+        };
+        $.post("http://201.131.220.18/natura/ajax/combos/ls_efinal", p, function(response) {
+            if (response.success) {
+                populate_combo("#adEstFinal", response.data);
+            }
+            $("input[type=checkbox]").removeAttr("disabled");
+        }, "json");
+    }
+
+    function adCicloOnChange() {
+        $("input[type=checkbox]").attr("disabled", "disabled");
+        var p = {
+            _token: "HG9TNEjuVCM4Cq5jT965sLqjg2KBiNWmp8h4NFk0",
+            ccl: $("#adCiclo").val()
+        };
+        $.post("http://201.131.220.18/natura/ajax/combos/ls_gerencias", p, function(response) {
+            if (response.success) {
+                populate_combo("#adGerencia", response.gerencias);
+                populate_combo("#adSector", response.sectores);
+                populate_combo("#adCNO", response.cnos);
+            }
+            $("input[type=checkbox]").removeAttr("disabled");
+        }, "json");
+    }
+
+    function adGerenciaOnChange() {
+        $("input[type=checkbox]").attr("disabled", "disabled");
+        var p = {
+            _token: "HG9TNEjuVCM4Cq5jT965sLqjg2KBiNWmp8h4NFk0",
+            ccl: $("#adCiclo").val(),
+            grn: $("#adGerencia").val()
+        };
+        $.post("http://201.131.220.18/natura/ajax/combos/ls_sectores", p, function(response) {
+            if (response.success) {
+                populate_combo("#adSector", response.sectores);
+                populate_combo("#adCNO", response.cnos);
+            }
+            $("input[type=checkbox]").removeAttr("disabled");
+        }, "json");
+    }
+
+    function adSectorOnChange() {
+        $("input[type=checkbox]").attr("disabled", "disabled");
+        var p = {
+            _token: "HG9TNEjuVCM4Cq5jT965sLqjg2KBiNWmp8h4NFk0",
+            ccl: $("#adCiclo").val(),
+            grn: $("#adGerencia").val(),
+            sec: $("#adSector").val()
+        };
+        $.post("http://201.131.220.18/natura/ajax/combos/ls_cnos", p, function(response) {
+            if (response.success) {
+                populate_combo("#adCNO", response.cnos);
+            }
+            $("input[type=checkbox]").removeAttr("disabled");
+        }, "json");
+    }
+
+    function set_combos() {
+        $("#adCiclo").on("change", adCicloOnChange);
+        $("#adGerencia").on("change", adGerenciaOnChange);
+        $("#adSector").on("change", adSectorOnChange);
+        $("#adEstInicial").on("change", adEstInicialOnChange);
+    }
+
+    function init() {
+        $("#btn-busca").on("click", btnBuscaOnClick);
+        $("#btRefreshCh1").on("click", draw_chart_1);
+        $("#btRefreshCh2").on("click", draw_chart_2);
+        $("#btRefreshCh3").on("click", draw_chart_3);
+        set_combos();
+    }
+    $(init);
+    </script>
+</body>
+
+</html>

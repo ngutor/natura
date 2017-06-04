@@ -11,6 +11,7 @@ var obj = {
 		}
         /*Filtro de Usario GV*/
         if($("#filterS").length>0){
+            console.log("Esto es una prueba");
             obj.gvFilterSearch();
             obj.grFilterSearch();
             obj.adFilterSearch();
@@ -40,6 +41,7 @@ var obj = {
         });
 	},
     gvFilterSearch: function(){
+        console.log("sdsd");
         $('#gvfCodigo').multiselect({
             includeSelectAllOption: true,
             nonSelectedText: 'Código',
@@ -97,12 +99,12 @@ var obj = {
         $('#adCNO').multiselect({
             includeSelectAllOption: true,
             nonSelectedText: 'Código CNO',
-            buttonWidth: '98px'
+            buttonWidth: '118px'
         });
         $('#adGerencia').multiselect({
             includeSelectAllOption: true,
             nonSelectedText: 'Gerencia',
-            buttonWidth: '98px'
+            buttonWidth: '118px'
         });
         $('#adSector').multiselect({
             includeSelectAllOption: true,
@@ -194,5 +196,6 @@ var obj = {
     }
 };
 (function() {
+    console.log("init");
   	obj.init();
 })();

@@ -110,7 +110,7 @@ body{font-family: 'Open Sans', sans-serif;font-size: 14px;background: #ebebeb;}
 .cnt-table-filter h2{font-size: 22px;color: #d9812b;margin-bottom: 20px;}
 .cnt-table-filter h2 span{font-size: 13px;color: #666;}
 .filter-b{margin-bottom: 30px;}
-.filter-b>ul>li{color: #666666;font-size: 12px;float: left;margin-right: 8px;}
+.filter-b>ul>li{color: #666666;font-size: 12px;float: left;margin-right: 5px;}
 .filter-b>ul>li:first-child{line-height: 34px;}
 .filter-b .dropdown-menu>.active>a, .filter-b .dropdown-menu>.active>a:focus, .filter-b .dropdown-menu>.active>a:hover{color: #7A7A7A;font-size: 14px;background: transparent;}
 .filter-b .btn-group>button{text-align: left;border:2px solid #dbdbdb;border-radius: 7px;}
@@ -207,6 +207,7 @@ body{font-family: 'Open Sans', sans-serif;font-size: 14px;background: #ebebeb;}
 .drawer-nav .user-list h5{font-weight: 700;font-size: 18px;color: #fff;font-style: italic;}
 .cnt-list-menu-d ul li ul{background: #f2a900;}
 .cnt-list-menu-d ul li ul li a{font-size: 18px;}
+.multiselect-native-select .caret{border-top: 8px dashed;border-top: 8px solid\9;border-right: 6px solid transparent;border-left: 6px solid transparent;position: absolute;right: 6px;top: 13px;color: #777;}
 /*Filter mobile*/
 .filter-mobile{margin-bottom: 18px;position: relative;}
 .btnFilter{width: 100%;padding: 0 2px;height: 50px;border-radius: 0;background: #f2821b;font-weight: 700;font-size: 22px;color: #fff;border:0;line-height: 50px;text-align: center;}
