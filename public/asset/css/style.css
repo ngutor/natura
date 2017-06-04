@@ -150,9 +150,9 @@ body{font-family: 'Open Sans', sans-serif;font-size: 14px;background: #ebebeb;}
 .table-tab-b tr td{border-top: 0!important;padding: 10px!important;}
 .table-tab-f{background: transparent!important;}
 .m-form-n h2{margin-bottom: 25px;margin-top: 0;font-size: 22px;color: #d9812b;}
-.modal-custom-n .modal-body{padding: 30px;}
+.modal-custom-n .modal-body{padding: 30px 25px;}
 .m-form-n .form-group>label, .m-form-n .form-group .row>label{text-align: left;padding-top: 0;font-size: 13px;color: #666666;font-weight: 400;margin-top: 7px;}
-.m-form-n input, .m-form-n select, .m-form-n textarea{border: 2px solid #dbdbdb;border-radius: 7px;color: #666;font-size: 13px;}
+.m-form-n input, .m-form-n select, .m-form-n textarea{border: 2px solid #dbdbdb;border-radius: 7px;color: #666;font-size: 12px;}
 .m-form-n .form-group{margin-bottom: 12px;}
 .btn-mC{height: 30px;line-height: 30px;padding: 0 25px;font-size: 13px;color: #fff;font-weight: 700;border-radius: 7px;}
 .btn-grabar{background: #d9812b;}
@@ -167,7 +167,7 @@ body{font-family: 'Open Sans', sans-serif;font-size: 14px;background: #ebebeb;}
 .m-form-n>p{color: #666;font-size: 13px;margin-bottom: 20px;margin-top: -10px;}
 .pen{color: #cccccc;}
 .cnt-table-reclamos .filter-b>ul>li:first-child{display: block;width: 100%;}
-.cnt-table-reclamos .adCconsulta{width: 120px;}
+.cnt-table-reclamos .adCconsulta{width: 128px;}
 .cnt-m-reclamos{margin-bottom: 25px;}
 .cnt-m-reclamos>ul>li{float: left;margin-right: 8px;}
 .cnt-m-reclamos>ul>li>a{padding: 14px 18px;font-size: 14px;color: #fff;font-weight: 700;display: block;border-radius: 8px;}
