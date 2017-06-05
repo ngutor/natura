@@ -28,28 +28,28 @@
                             <li>
                                 <select id="adCiclo" class="form-control" multiple="multiple">
                                     @foreach($ciclos as $ciclo)
-                                    <option value="{{ $ciclo->value }}" selected="true">{{ $ciclo->text }}</option>
+                                    <option value="{{ $ciclo->value }}">{{ $ciclo->text }}</option>
                                     @endforeach
                                 </select>
                             </li>
                             <li>
                                 <select id="adGerencia" class="form-control" multiple="multiple">
                                     @foreach($gerencias as $gerencia)
-                                    <option value="{{ $gerencia->value }}" selected="true">{{ $gerencia->text }}</option>
+                                    <option value="{{ $gerencia->value }}">{{ $gerencia->text }}</option>
                                     @endforeach
                                 </select>
                             </li>
                             <li>
                                 <select id="adSector" class="form-control" multiple="multiple">
                                     @foreach($sectores as $sector)
-                                    <option value="{{ $sector->value }}" selected="true">{{ $sector->text }}</option>
+                                    <option value="{{ $sector->value }}">{{ $sector->text }}</option>
                                     @endforeach
                                 </select>
                             </li>
                             <li>
                                 <select id="adCNO" class="form-control" multiple="multiple">
                                     @foreach($cnos as $cno)
-                                    <option value="{{ $cno->value }}" selected="true">{{ $cno->text }}</option>
+                                    <option value="{{ $cno->value }}">{{ $cno->text }}</option>
                                     @endforeach
                                 </select>
                             </li>

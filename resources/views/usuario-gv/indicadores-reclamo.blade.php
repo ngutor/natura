@@ -21,50 +21,53 @@
                 </div>
                 <div class="fluid-list cnt-table-filter">
                     <h2>Indicadores de Reclamos - Gestión de Reclamos</h2>
-                    <div class="fluid-list filter-b" id="filterS">
-                        <ul class="reset-ul">
-                            <li>Filtrar por:</li>
-                            <li>
-                                <select id="adCiclo" class="form-control" multiple="multiple">
-                                    @foreach($ciclos as $ciclo)
-                                    <option value="{{ $ciclo->value }}" selected="true">{{ $ciclo->text }}</option>
-                                    @endforeach
-                                </select>
-                                <input type="hidden" id="tbGerencia" value="{{ $user->v_PerClienteAgrupa1 }}" />
-                            </li>
-                            <li>
-                                <select id="adSector" class="form-control" multiple="multiple">
-                                    @foreach($sectores as $sector)
-                                    <option value="{{ $sector->value }}" selected="true">{{ $sector->text }}</option>
-                                    @endforeach
-                                </select>
-                            </li>
-                            <li>
-                                <select id="adCNO" class="form-control" multiple="multiple">
-                                    @foreach($cnos as $cno)
-                                    <option value="{{ $cno->value }}" selected="true">{{ $cno->text }}</option>
-                                    @endforeach
-                                </select>
-                            </li>
-                            <li>
-                                <select id="adEstInicial" class="form-control" multiple="multiple">
-                                    @foreach($estados as $estado)
-                                    <option value="{{ $estado->text }}" selected="true">{{ $estado->text }}</option>
-                                    @endforeach
-                                </select>
-                            </li>
-                            <li>
-                                <select id="adEstFinal" class="form-control" multiple="multiple">
-                                    @foreach($estadosf as $estado)
-                                    <option value="{{ $estado->text }}" selected="true">{{ $estado->text }}</option>
-                                    @endforeach
-                                </select>
-                            </li>
-                            <li>
-                                <button id="btn-busca" class="btn btn-search">Buscar</button>
-                            </li>
-                        </ul>
-                    </div>
+                    <form id="form-xls" action="{{ url('export/reclamos') }}" method="post">
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}" />
+                        <div class="fluid-list filter-b" id="filterS">
+                            <ul class="reset-ul">
+                                <li>Filtrar por:</li>
+                                <li>
+                                    <select id="adCiclo" name="ccl[]" class="form-control" multiple="multiple">
+                                        @foreach($ciclos as $ciclo)
+                                        <option value="{{ $ciclo->value }}" selected="true">{{ $ciclo->text }}</option>
+                                        @endforeach
+                                    </select>
+                                    <input type="hidden" id="tbGerencia" name="grn[]" value="{{ $user->v_PerClienteAgrupa1 }}" />
+                                </li>
+                                <li>
+                                    <select id="adSector" name="str[]" class="form-control" multiple="multiple">
+                                        @foreach($sectores as $sector)
+                                        <option value="{{ $sector->value }}" selected="true">{{ $sector->text }}</option>
+                                        @endforeach
+                                    </select>
+                                </li>
+                                <li>
+                                    <select id="adCNO" name="cno[]" class="form-control" multiple="multiple">
+                                        @foreach($cnos as $cno)
+                                        <option value="{{ $cno->value }}" selected="true">{{ $cno->text }}</option>
+                                        @endforeach
+                                    </select>
+                                </li>
+                                <li>
+                                    <select id="adEstInicial" name="est[]" class="form-control" multiple="multiple">
+                                        @foreach($estados as $estado)
+                                        <option value="{{ $estado->text }}" selected="true">{{ $estado->text }}</option>
+                                        @endforeach
+                                    </select>
+                                </li>
+                                <li>
+                                    <select id="adEstFinal" class="form-control" multiple="multiple">
+                                        @foreach($estadosf as $estado)
+                                        <option value="{{ $estado->text }}" selected="true">{{ $estado->text }}</option>
+                                        @endforeach
+                                    </select>
+                                </li>
+                                <li>
+                                    <button id="btn-busca" class="btn btn-search">Buscar</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </form>
                     <div id="chart-div" class="fluid-list cnt-graficas-n">
                         <div class="row"><!-- GRÁFICO 1 -->
                             <div class="col-xs-6 col-md-7">
@@ -144,18 +147,18 @@
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-body">
-                                        <form class="form-horizontal m-form-n" action="">
+                                        <form class="form-horizontal m-form-n" id="form-email">
                                             <h2>Enviar listado por mail</h2>
                                             <div class="form-group">
                                                 <label for="email" class="col-sm-2 control-label">Enviar a :</label>
                                                 <div class="col-sm-10">
-                                                    <input type="email" name="email" class="form-control" id="titulo">
+                                                    <input type="text" name="email" class="form-control" id="email" placeholder="Si desea ingresar varias direcciones, sepárelas utilizando punto y coma (;)" />
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label for="msn" class="col-sm-2 control-label">Mensaje:</label>
                                                 <div class="col-sm-10">
-                                                    <textarea name="msn" class="form-control" rows="5"></textarea>
+                                                    <textarea name="msn" class="form-control" rows="5" id="msn"></textarea>
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -197,6 +200,36 @@
     <script src="{{ url('asset/js/highcharts-3d.js') }}"></script>
     <script type="text/javascript">
         var dataset, arr_fechas, numberOfItems, arr_estados;
+        function exportToXls() {
+            document.getElementById("form-xls").submit();
+        }
+        function formEmailOnSubmit(event) {
+            event.preventDefault();
+            toEmail();
+        }
+        function toEmail() {
+            $("#form-email-button").attr("disabled", "disabled");
+            var dataToPost = $("#form-xls").serializeArray();
+            dataToPost.push({name: "mail", value: document.getElementById("email").value});
+            dataToPost.push({name: "msn", value: document.getElementById("msn").value});
+            $.ajax({
+                type: "POST",
+                url: "{{ url('ajax/indicadores/emailreclamo') }}",
+                data: dataToPost,
+                dataType: "json",
+                success: function(data) {
+                    if(data.success) {
+                        $("#tModalE").modal("hide");
+                    }
+                    alert(data.message);
+                    $("#form-email-button").removeAttr("disabled");
+                },
+                error: function() {
+                    alert("No se pudo enviar el mensaje.");
+                    $("#form-email-button").removeAttr("disabled");
+                }
+            });
+        }
         function get_index(v_array,v_key) {
             var indexOf = -1;
             var size = v_array.length;

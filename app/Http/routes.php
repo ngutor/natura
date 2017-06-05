@@ -61,6 +61,7 @@ Route::group(["prefix" => "ajax", "namespace" => "Ajax"], function() {
 	Route::group(["prefix" => "indicadores"], function() {
 		Route::post("reclamos", "Indicadores@dt_reclamos");
 		Route::post("gestion", "Indicadores@dt_gestion_reclamos");
+		Route::post("emailreclamo", "Indicadores@send_email_reclamos");
 	});
 	Route::group(["prefix" => "reclamos"], function() {
 		Route::post("busca", "Reclamos@dt_busqueda");

@@ -320,7 +320,7 @@ class Revistas extends Controller {
                     ->whereIn("da.NroDocuCliente", $gerencias)
                     ->whereIn("da.Sector", $sectores)
                     ->whereRaw("da.IdeDestinatario like '" . $codigo . "'")
-                    ->select("da.IdeDestinatario as consultora", "gi.CiCloCorteFactuCliente as ciclo", "moti.DesMotivoEnvio as situacion", DB::raw("if(envxp.iCodAutogenAudi_ult > 0,'Si','No') as auditoria"))
+                    ->select("da.IdeDestinatario as consultora", "gi.CiCloCorteFactuCliente as ciclo", "moti.DesMotivoEnvio as situacion", DB::raw("if(envxp.iCodAutogenAudi_ult > 0,'Si','No') as auditoria"),DB::raw("if(envxp.iCodAutogenAtc_ult = 0,'No','Si') as ereclamo"))
                     ->get();
                 $filename = "rep_visitas_" . date("Ymd_His");
                 Excel::create($filename, function($excel) use($result, $ciclos, $cnos, $gerencias, $sectores, $codigo) {

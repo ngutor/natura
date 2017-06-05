@@ -4,7 +4,8 @@
     <title>Admin Usuarios</title>
     @include("common.head")
     <style type="text/css">
-        .table-footer,#tableCN{display:none;}
+        .tr-row{display:none;}
+        #table-footer,#tableCN{display:none;}
     </style>
 </head>
 <body class="drawer drawer--right">
@@ -315,17 +316,20 @@
                 mod: document.getElementById("tbModo").value,
                 cod: document.getElementById("tbCodcons").value
             };
-            document.getElementById("btn-submit").innerHTML = "Espere...";
-            $.post("{{ url('ajax/usuarios/registro') }}", p, function(response) {
-                if(response.success) {
-                    $("#bt-buscar").trigger("click");
-                    alert("Usuario registrado!");
-                    $("#tModalNuevo").modal("hide");
-                    document.getElementById("form-nuevo").reset();
-                }
-                else alert(response,message);
-                document.getElementById("btn-submit").innerHTML = "GRABAR";
-            }, "json");
+            if(p.nom != "" && p.ape != "" && p.nrd != "" && p.eml != "" && p.als != "" && p.psw != "" && p.rpw != "" && p.cod != "") {
+                document.getElementById("btn-submit").innerHTML = "Espere...";
+                $.post("{{ url('ajax/usuarios/registro') }}", p, function(response) {
+                    if(response.success) {
+                        $("#bt-buscar").trigger("click");
+                        alert("Usuario registrado!");
+                        $("#tModalNuevo").modal("hide");
+                        document.getElementById("form-nuevo").reset();
+                    }
+                    else alert(response,message);
+                    document.getElementById("btn-submit").innerHTML = "GRABAR";
+                }, "json");
+            }
+            else alert("Ingrese correctamente los datos");
         }
         function mode(valor) {
             document.getElementById("tbNombres").value = "";
@@ -428,7 +432,7 @@
                                     $("<span/>").addClass("glyphicon glyphicon-new-window").attr("aria-hidden","true")
                                 ).on("click", editaUsuario)
                             )
-                        )
+                        ).addClass("tr-row tr-" + Math.floor(i / rowsPerPage))
                     );
                 }
                 $("#pg-container").empty().append(
@@ -460,7 +464,7 @@
                     )
                 );
                 $("#tableCN").fadeIn();
-                $(".table-footer").fadeIn();
+                $("#table-footer").fadeIn();
                 goto(0);
             }
             else {
@@ -482,7 +486,7 @@
             };
             if(p.cno && p.grn && p.str && p.prf) {
                 $("#tableCN").hide();
-                $(".table-footer").hide();
+                $("#table-footer").hide();
                 $.post("{{ url('ajax/usuarios/busca') }}", p, buscarOnLoad, "json");
             }
             else {
